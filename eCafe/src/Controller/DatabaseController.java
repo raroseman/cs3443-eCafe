@@ -20,45 +20,59 @@ public class DatabaseController {
 	public boolean attemptConnection() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
-		} catch (Exception ex) {
-			System.err.println("Driver Registration Failure: "
-					+ ex.getMessage());
+		} catch (Exception e) {
+			System.err.println("Driver Registration Failure: " + e.getMessage());
 			return false;
 		}
 		try {
 			con = DriverManager.getConnection("jdbc:mysql://" + host + "/"
 					+ database + "?user=" + username + "&password=" + password);
-		} catch (SQLException ex) {
-			System.out.println("SQLException: " + ex.getMessage());
-			System.out.println("SQLState: " + ex.getSQLState());
-			System.out.println("VendorError: " + ex.getErrorCode());
+		} catch (SQLException e) {
+			System.err.println(e.getMessage());
 			return false;
 		}
 		return true;
 	}
-
+	
+	/**
+	 * Executes select statement using given record and table
+	 * @param record
+	 * @param table
+	 * @return True if all goes well
+	 */
 	public boolean selectFrom(String record, String table) {
 		Statement state = null;
 		ResultSet set = null;
 		try {
 			state = con.createStatement();
-		} catch (SQLException ex) {
-			System.out.println("SQLException: " + ex.getMessage());
-			System.out.println("SQLState: " + ex.getSQLState());
-			System.out.println("VendorError: " + ex.getErrorCode());
+		} catch (SQLException e) {
+			System.err.println(e.getMessage());
 			return false;
 		}
 		try {
 			set = state.executeQuery("SELECT " + record + " FROM " + table);
-		} catch (SQLException ex) {
-			System.out.println("SQLException: " + ex.getMessage());
-			System.out.println("SQLState: " + ex.getSQLState());
-			System.out.println("VendorError: " + ex.getErrorCode());
+		} catch (SQLException e) {
+			System.err.println(e.getMessage());
 			return false;
 		}
 
-		System.out.println(set.toString());
+		try {
+			while(set.next()){
+				try {
+					System.out.println(set.getString("IP_Address"));
+				} catch (SQLException e) {
+					System.err.println(e.getMessage());
+				}
+			}
+		} catch (SQLException e) {
+			System.err.println(e.getMessage());
+		}
 		
+		try {
+			set.close();
+		} catch (SQLException e) {
+			System.err.println(e.getMessage());
+		}
 		return true;
 	}
 }
