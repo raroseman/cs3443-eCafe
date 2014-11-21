@@ -1,3 +1,7 @@
+import javax.swing.JFrame;
+
+
+import View.*;
 import Controller.DatabaseController;
 
 
@@ -9,6 +13,14 @@ public class TestMain {
 		db.attemptConnection();
 		
 		db.selectFrom("*", "Machines");
+		
+		MenuView menuView = new MenuView();
+		menuView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		menuView.setVisible(true);
+		
+		KitchenView kitchenView = new KitchenView();
+		kitchenView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		kitchenView.setVisible(true);
 		
 	}
 
