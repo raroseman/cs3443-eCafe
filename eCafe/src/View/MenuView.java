@@ -19,14 +19,14 @@ public class MenuView extends JFrame{
 	private Menu menu;
 	private JPanel menuFrame;
 	private JTextField textField;
-	
 	/**
 	 * Create the frame.
 	 */
-	public MenuView() {
+	public MenuView(int num) {
 		/**
 		 * Building the menuFrame to hold the components of searchPanel and orderPanel.
 		 */
+		super("Table " + num);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 814, 494);
 		menuFrame = new JPanel();

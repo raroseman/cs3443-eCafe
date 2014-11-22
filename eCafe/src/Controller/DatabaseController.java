@@ -75,6 +75,4 @@ public class DatabaseController {
 		}
 		return true;
 	}
-	
-	//tg5g5tg54rf4rfg6g6
 }

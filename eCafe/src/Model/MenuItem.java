@@ -5,8 +5,8 @@ public class MenuItem {
 	private String description;
 	private float price;
 	private float prepTime;
-	
-	public MenuItem(String name, String description, float price, float prepTime){
+
+	public MenuItem(String name, String description, float price, float prepTime) {
 		this.name = name;
 		this.description = description;
 		this.price = price;
