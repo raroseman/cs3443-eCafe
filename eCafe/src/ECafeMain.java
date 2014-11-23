@@ -12,11 +12,13 @@ public class ECafeMain {
 	private static Restaurant restaurant;
 
 	public static void main(String[] args) {
-		db = new DatabaseController("localhost", "unity", "root", "");
+		db = new DatabaseController("localhost", "ECafe", "root", "");
 
 		while (!db.attemptConnection())
 			;
 
+		db.selectFrom("*", "MenuItems", "Name");
+		
 		restaurant = new Restaurant("Test", 3);
 
 		for (int i = 0; i < restaurant.getNumTables(); i++) {

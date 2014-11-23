@@ -40,7 +40,7 @@ public class DatabaseController {
 	 * @param table
 	 * @return True if all goes well
 	 */
-	public boolean selectFrom(String record, String table) {
+	public boolean selectFrom(String record, String table, String col) {
 		Statement state = null;
 		ResultSet set = null;
 		try {
@@ -59,7 +59,7 @@ public class DatabaseController {
 		try {
 			while(set.next()){
 				try {
-					System.out.println(set.getString("IP_Address"));
+					System.out.println(set.getString(col));
 				} catch (SQLException e) {
 					System.err.println(e.getMessage());
 				}
