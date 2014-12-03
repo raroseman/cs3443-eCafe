@@ -11,18 +11,34 @@ public class Menu {
 	}
 
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GETTERS/SETTERS
+	/**
+	 * Get menu items
+	 * @return items
+	 */
 	public ArrayList<MenuItem> getItems() {
 		return items;
 	}
 
+	/**
+	 * Set menu items
+	 * @param items
+	 */
 	public void setItems(ArrayList<MenuItem> items) {
 		this.items = items;
 	}
-
+	
+	/**
+	 * Get the specials from menu
+	 * @return specials
+	 */
 	public ArrayList<MenuSpecial> getSpecials() {
 		return specials;
 	}
 
+	/**
+	 * Set the menu specials
+	 * @param specials
+	 */
 	public void setSpecials(ArrayList<MenuSpecial> specials) {
 		this.specials = specials;
 	}
