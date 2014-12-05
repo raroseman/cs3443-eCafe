@@ -64,7 +64,7 @@ public class MenuView extends JFrame{
 		 * Label next to search bar.
 		 */
 		JLabel lblSearch = new JLabel("search");
-		lblSearch.setBounds(10, 37, 38, 17);
+		lblSearch.setBounds(10, 37, 42, 17);
 		searchPanel.add(lblSearch);
 		
 		/**
