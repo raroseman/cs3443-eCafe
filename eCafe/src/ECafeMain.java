@@ -23,7 +23,7 @@ public class ECafeMain {
 
 		for (int i = 0; i < restaurant.getNumTables(); i++) {
 			menuView = new MenuView((i+1));
-			menuView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			menuView.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 			menuView.setVisible(true);
 		}
 
