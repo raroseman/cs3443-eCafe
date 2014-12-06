@@ -1,3 +1,5 @@
+import java.sql.SQLException;
+
 import javax.swing.JFrame;
 
 import Controller.DatabaseController;
@@ -11,18 +13,15 @@ public class ECafeMain {
 	private static KitchenView kitchenView;
 	private static Restaurant restaurant;
 
-	public static void main(String[] args) {
-		db = new DatabaseController("localhost", "ECafe", "root", "");
-
-		while (!db.attemptConnection())
-			;
-
-		db.selectFrom("*", "MenuItems", "Name");
+	public static void main(String[] args) throws SQLException {
+		restaurant = new Restaurant("eCafe - Coffee, Tea, American Fare", 1);
 		
-		restaurant = new Restaurant("Test", 3);
+		db = new DatabaseController("localhost", "ECafe", "root", "", restaurant.getMenu(), restaurant.getInventory());
+		
+		while(!db.attemptConnection());
 
 		for (int i = 0; i < restaurant.getNumTables(); i++) {
-			menuView = new MenuView((i+1));
+			menuView = new MenuView((i+1), restaurant);
 			menuView.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 			menuView.setVisible(true);
 		}

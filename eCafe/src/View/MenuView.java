@@ -6,23 +6,31 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
 import java.awt.Color;
+
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JButton;
+
 import java.awt.Font;
 
 import Model.Menu;
-
+import Model.Restaurant;
+/**
+ * 
+ * @author All
+ *
+ */
 public class MenuView extends JFrame{
-	private Menu menu;
+	private Restaurant restaurant;
 	private JPanel menuFrame;
 	private JTextField textField;
 	/**
 	 * Create the frame.
 	 */
-	public MenuView(int num) {
+	public MenuView(int num, Restaurant restaurant) {
 		/**
 		 * Building the menuFrame to hold the components of searchPanel and orderPanel.
 		 */
@@ -123,7 +131,8 @@ public class MenuView extends JFrame{
 		/**
 		 * The title of the panel.  Should hold the restaurant name.
 		 */
-		JLabel lblRestaurant = new JLabel("Restaurant");
+		this.restaurant = restaurant;
+		JLabel lblRestaurant = new JLabel(restaurant.getName());
 		lblRestaurant.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		titelPanel.add(lblRestaurant);
 	}

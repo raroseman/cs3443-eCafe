@@ -2,71 +2,57 @@ package Model;
 
 public class Ingredient {
 
-	private int quantity;
-	private float cost;
 	private String name;
+	private String descrip;
+	private float cost;
+	private int amount;
 
 	/**
-	 * Constructor to initialize the 
-	 * quantity, cost, and name of the 
-	 * ingredient
-	 * @param quantity
-	 * @param cost
+	 * Constructor
+	 * 
 	 * @param name
+	 * @param descrip
+	 * @param cost
+	 * @param amount
 	 */
-	public Ingredient(int quantity, float cost, String name) {
-		this.quantity = quantity;
-		this.cost = cost;
+	public Ingredient(String name, String descrip, float cost, int amount) {
 		this.name = name;
+		this.descrip = descrip;
+		this.cost = cost;
+		this.amount = amount;
 	}
 
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GETTERS/SETTERS
-	/**
-	 * Get the cost of the ingredient
-	 * @return cost
-	 */
-	public float getCost() {
-		return cost;
-	}
-
-	/**
-	 * Get the quantity of the ingredient
-	 * @return quantity
-	 */
-	public int getQuantity() {
-		return quantity;
-	}
-
-	/**
-	 * Set the quantity of the ingredient
-	 * @param quantity
-	 */
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-
-	/**
-	 * Set the cost of the ingredient
-	 * @param cost
-	 */
-	public void setCost(float cost) {
-		this.cost = cost;
-	}
-
-	/**
-	 * Get the name of the ingredient
-	 * @return name
-	 */
 	public String getName() {
 		return name;
 	}
 
-	/**
-	 * Set the name of the ingredient
-	 * @param name
-	 */
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getDescrip() {
+		return descrip;
+	}
+
+	public void setDescrip(String descrip) {
+		this.descrip = descrip;
+	}
+
+	public float getCost() {
+		return cost;
+	}
+
+	public void setCost(float cost) {
+		this.cost = cost;
+	}
+
+	public int getAmount() {
+		return amount;
+	}
+
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GETTERS/SETTERS
 }
