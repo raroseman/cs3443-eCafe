@@ -7,7 +7,8 @@ public class Menu {
 	private ArrayList<MenuSpecial> specials;
 
 	public Menu() {
-		// Do nothing
+		items = new ArrayList<MenuItem>();
+		specials = new ArrayList<MenuSpecial>();
 	}
 
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GETTERS/SETTERS

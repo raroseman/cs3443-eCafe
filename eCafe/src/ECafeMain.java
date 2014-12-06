@@ -19,6 +19,10 @@ public class ECafeMain {
 		db = new DatabaseController("localhost", "ECafe", "root", "", restaurant.getMenu(), restaurant.getInventory());
 		
 		while(!db.attemptConnection());
+		
+		db.pullMenu();
+		
+		db.pullInventory();
 
 		for (int i = 0; i < restaurant.getNumTables(); i++) {
 			menuView = new MenuView((i+1), restaurant);

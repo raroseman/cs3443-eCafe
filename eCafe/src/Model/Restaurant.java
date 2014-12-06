@@ -14,11 +14,17 @@ public class Restaurant {
 
 	public Restaurant(String name) {
 		this.name = name;
+		menu = new Menu();
+		inventory = new Inventory();
+		account = new Account();
 		queue = new ArrayList<Order>();
 	}
 
 	public Restaurant(String name, int numTables) {
 		this.name = name;
+		menu = new Menu();
+		inventory = new Inventory();
+		account = new Account();
 		createTables(numTables);
 		queue = new ArrayList<Order>();
 	}
