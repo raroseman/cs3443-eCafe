@@ -19,7 +19,6 @@ public class DatabaseController {
 	private Connection connection;
 	private Menu menu;
 	private Inventory inventory;
-	private int arbitraryvariable;
 
 	public DatabaseController(String host, String database, String username,
 			String password, Menu menu, Inventory inventory) {
