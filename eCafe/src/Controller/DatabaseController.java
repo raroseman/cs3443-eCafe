@@ -2,77 +2,85 @@ package Controller;
 
 import java.sql.*;
 
+import Model.Inventory;
+import Model.Menu;
+
+/**
+ * Executes database queries
+ * 
+ * @author All Test
+ *
+ */
 public class DatabaseController {
 	private String host;
 	private String database;
 	private String username;
 	private String password;
-	private Connection con;
+	private Connection connection;
+	private Menu menu;
+	private Inventory inventory;
+	private int arbitraryvariable;
 
 	public DatabaseController(String host, String database, String username,
-			String password) {
+			String password, Menu menu, Inventory inventory) {
 		this.host = host;
 		this.database = database;
 		this.username = username;
 		this.password = password;
+		this.menu = menu;
+		this.inventory = inventory;
 	}
 
-	public boolean attemptConnection() {
+	public boolean attemptConnection() throws SQLException {
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 		} catch (Exception e) {
-			System.err.println("Driver Registration Failure: " + e.getMessage());
+			System.err
+					.println("Driver Registration Failure: " + e.getMessage());
 			return false;
 		}
-		try {
-			con = DriverManager.getConnection("jdbc:mysql://" + host + "/"
-					+ database + "?user=" + username + "&password=" + password);
-		} catch (SQLException e) {
-			System.err.println(e.getMessage());
-			return false;
-		}
+		connection = DriverManager.getConnection("jdbc:mysql://" + host + "/"
+				+ database + "?user=" + username + "&password=" + password);
 		return true;
 	}
-	
-	/**
-	 * Executes select statement using given record and table
-	 * @param record
-	 * @param table
-	 * @return True if all goes well
-	 */
-	public boolean selectFrom(String record, String table, String col) {
-		Statement state = null;
-		ResultSet set = null;
-		try {
-			state = con.createStatement();
-		} catch (SQLException e) {
-			System.err.println(e.getMessage());
-			return false;
-		}
-		try {
-			set = state.executeQuery("SELECT " + record + " FROM " + table);
-		} catch (SQLException e) {
-			System.err.println(e.getMessage());
-			return false;
+
+	public boolean pullMenu() throws SQLException {
+		Statement statement = connection.createStatement();
+		ResultSet set = statement.executeQuery("SELECT * FROM MenuItems");
+
+		while (set.next()) {
+			String name = set.getString("Name");
+			String descrip = set.getString("Descrip");
+			float price = set.getFloat("Price");
+			float prepTime = set.getFloat("Time");
+			menu.addMenuItem(name, descrip, price, prepTime);
 		}
 
-		try {
-			while(set.next()){
-				try {
-					System.out.println(set.getString(col));
-				} catch (SQLException e) {
-					System.err.println(e.getMessage());
-				}
-			}
-		} catch (SQLException e) {
-			System.err.println(e.getMessage());
-		}
-		
-		try {
-			set.close();
-		} catch (SQLException e) {
-			System.err.println(e.getMessage());
-		}
 		return true;
 	}
+
+	public boolean pullInventory() throws SQLException {
+		Statement statement = connection.createStatement();
+		ResultSet set = statement.executeQuery("SELECT * FROM Ingredients");
+
+		while (set.next()) {
+			String name = set.getString("Name");
+			String descrip = set.getString("Descrip");
+			float cost = set.getFloat("Cost");
+			int amount = set.getInt("Amount");
+			inventory.addIngredient(name, descrip, cost, amount);
+		}
+		set.close();
+		return true;
+	}
+
+	public boolean updateInventory(String name, int amount) throws SQLException {
+		Statement statement = connection.createStatement();
+		ResultSet set = statement
+				.executeQuery("UPDATE `Ingredients` SET `Amount`=" + amount
+						+ " WHERE `Name`=" + name);
+		set.close();
+		return false;
+	}
+
 }

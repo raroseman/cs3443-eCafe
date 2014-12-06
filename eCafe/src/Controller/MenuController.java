@@ -1,11 +1,13 @@
 package Controller;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import Model.Menu;
 import Model.MenuItem;
 
-public class MenuController {
+public class MenuController implements ActionListener{
 	private Menu menu;
 	
 	/**
@@ -15,27 +17,11 @@ public class MenuController {
 	public MenuController(Menu menu){
 		this.menu = menu;
 	}
-	
-	/**
-	 * Fills menu with MenuItems held in outside SQL database
-	 */
-	public void populateMenu(){
-		ArrayList<MenuItem> items = new ArrayList<MenuItem>();
-		//Query SQL database
-		//Create MenuItem for each entry with createMenuItem()
-		//Add new MenuItem to "items"
-		menu.setItems(items);
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 	
-	/**
-	 * Creates a new MenuItem from parameters
-	 * @param name
-	 * @param description
-	 * @param price
-	 * @param prepTime
-	 * @return MenuItem
-	 */
-	private MenuItem createMenuItem(String name, String description, float price, float prepTime){
-		return new MenuItem(name, description, price, prepTime);
-	}
 }
