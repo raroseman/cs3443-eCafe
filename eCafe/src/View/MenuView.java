@@ -1,23 +1,16 @@
 package View;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.awt.*;
 
+import javax.swing.AbstractButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import java.awt.Color;
-
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.JLabel;
-import javax.swing.JButton;
-
-import java.awt.Font;
+import javax.swing.*;
 
 import Model.Menu;
 import Model.Restaurant;
+import Controller.MenuController;
 /**
  * 
  * @author All
@@ -27,6 +20,10 @@ public class MenuView extends JFrame{
 	private Restaurant restaurant;
 	private JPanel menuFrame;
 	private JTextField textField;
+	private JTextArea textArea;
+	private JPanel searchPanel;
+	private JPanel orderPanel;
+	
 	/**
 	 * Create the frame.
 	 */
@@ -46,7 +43,7 @@ public class MenuView extends JFrame{
 		/**
 		 * searchPanel holds the search bar and results of the search.
 		 */
-		JPanel searchPanel = new JPanel();
+		searchPanel = new JPanel();
 		searchPanel.setBackground(Color.LIGHT_GRAY);
 		searchPanel.setBounds(10, 67, 427, 268);
 		menuFrame.add(searchPanel);
@@ -55,7 +52,7 @@ public class MenuView extends JFrame{
 		/**
 		 * Where the results of the search should be populated.
 		 */
-		JTextArea textArea = new JTextArea();
+		textArea = new JTextArea();
 		textArea.setEditable(false);
 		textArea.setBounds(58, 69, 298, 161);
 		searchPanel.add(textArea);
@@ -85,7 +82,7 @@ public class MenuView extends JFrame{
 		/**
 		 * orderPanel will display the customers current order and total.
 		 */
-		JPanel orderPanel = new JPanel();
+		orderPanel = new JPanel();
 		orderPanel.setBackground(Color.LIGHT_GRAY);
 		orderPanel.setBounds(447, 69, 324, 307);
 		menuFrame.add(orderPanel);
@@ -135,5 +132,32 @@ public class MenuView extends JFrame{
 		JLabel lblRestaurant = new JLabel(restaurant.getName());
 		lblRestaurant.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		titelPanel.add(lblRestaurant);
+	}
+	
+	public JTextField getSearchField() {
+		return textField;
+	}
+	
+	public JTextArea getResultsField() {
+		return textArea;
+	}
+	
+	public void printcomps() {
+		Component[] components = searchPanel.getComponents();
+		System.out.println(components);
+	}
+	
+	public void registerListener(MenuController controller) {
+		
+		Component[] components = searchPanel.getComponents();
+		
+		//components = orderPanel.getComponents();
+		
+		for (Component component : components) {
+			if (component instanceof AbstractButton) {
+				AbstractButton button = (AbstractButton) component;
+				button.addActionListener(controller);
+			}
+		}
 	}
 }
