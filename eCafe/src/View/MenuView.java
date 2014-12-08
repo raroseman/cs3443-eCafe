@@ -22,8 +22,10 @@ public class MenuView extends JFrame{
 	private JPanel menuFrame;
 	private JTextField textField;
 	private JTextArea textArea;
+	private JTextArea textArea_1;
 	private JPanel searchPanel;
 	private JPanel orderPanel;
+	private JLabel lblTotal;
 	
 	/**
 	 * Create the frame.
@@ -99,7 +101,7 @@ public class MenuView extends JFrame{
 		/**
 		 * Area to display the ordered items.
 		 */
-		JTextArea textArea_1 = new JTextArea();
+		textArea_1 = new JTextArea();
 		textArea_1.setEditable(false);
 		textArea_1.setBounds(76, 33, 223, 198);
 		orderPanel.add(textArea_1);
@@ -107,7 +109,7 @@ public class MenuView extends JFrame{
 		/**
 		 * This should be updated when items are place into order.
 		 */
-		JLabel lblTotal = new JLabel("Total: $0.00");
+		lblTotal = new JLabel("Total: $0.00");
 		lblTotal.setBounds(26, 242, 114, 25);
 		orderPanel.add(lblTotal);
 		
@@ -142,15 +144,37 @@ public class MenuView extends JFrame{
 		titelPanel.add(lblRestaurant);
 	}
 	
+	/**
+	 * getSearchField returns the text field that holds the search queries.
+	 * @return the text field that the customer uses to search.
+	 */
 	public JTextField getSearchField() {
 		return textField;
 	}
 	
+	/**
+	 * getResultsField returns the text area that holds the results of the search query.
+	 * @return The text area that holds the results of the query.
+	 */
 	public JTextArea getResultsField() {
 		return textArea;
 	}
 	
+	/**
+	 * getOrderField returns the text area that holds the items placed in order.
+	 * @return The text area that holds ordered items.
+	 */
+	public JTextArea getOrderField() {
+		return textArea_1;
+	}
 	
+	/**
+	 * getTotalLabel returns the label that will update the total.
+	 * @return The label that will update the total.
+	 */
+	public JLabel getTotalLabel() {
+		return lblTotal;
+	}
 	
 	public void registerListener(MenuController controller) {
 		
@@ -158,6 +182,14 @@ public class MenuView extends JFrame{
 		
 		//components = orderPanel.getComponents();
 		
+		for (Component component : components) {
+			if (component instanceof AbstractButton) {
+				AbstractButton button = (AbstractButton) component;
+				button.addActionListener(controller);
+			}
+		}
+		
+		components = orderPanel.getComponents();
 		for (Component component : components) {
 			if (component instanceof AbstractButton) {
 				AbstractButton button = (AbstractButton) component;
