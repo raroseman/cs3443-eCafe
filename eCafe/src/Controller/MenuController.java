@@ -23,21 +23,26 @@ public class MenuController implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		String s = menuView.getSearchField().getText().trim();
-		if (!s.equals("")) {
-			menuView.getSearchField().setText(s);
-		}
-		s.toLowerCase();
-		MenuItem result = null;
-		for (MenuItem item : menu.getItems()) {
-			String itemName = item.getName().toLowerCase();
-			if (itemName.indexOf(s) >= 0) {
-				result = item;
+		String command = e.getActionCommand();
+		
+		if (command.equals("go!")) {
+			String s = menuView.getSearchField().getText().trim();
+			if (!s.equals("")) {
+				menuView.getSearchField().setText(s);
 			}
+			s.toLowerCase();
+			MenuItem result = null;
+			for (MenuItem item : menu.getItems()) {
+				String itemName = item.getName().toLowerCase();
+				if (itemName.indexOf(s) >= 0) {
+					result = item;
+				}
+			}
+			menuView.getResultsField().setText(result.getName() + "\t         $" + result.getPrice() + "\t      prep:" +
+					result.getPrepTime() + " minutes" );
 		}
 		
-		menuView.getResultsField().setText(result.getName() + "\t         $" + result.getPrice() + "\t      prep:" +
-				result.getPrepTime() + " minutes" );
+		
 		
 	}
 	
