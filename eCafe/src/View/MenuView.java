@@ -3,6 +3,7 @@ package View;
 import java.awt.*;
 
 import javax.swing.AbstractButton;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -45,7 +46,7 @@ public class MenuView extends JFrame{
 		 */
 		searchPanel = new JPanel();
 		searchPanel.setBackground(Color.LIGHT_GRAY);
-		searchPanel.setBounds(10, 67, 427, 268);
+		searchPanel.setBounds(10, 67, 427, 309);
 		menuFrame.add(searchPanel);
 		searchPanel.setLayout(null);
 		
@@ -78,6 +79,13 @@ public class MenuView extends JFrame{
 		JButton btnGo = new JButton("go!");
 		btnGo.setBounds(364, 34, 60, 23);
 		searchPanel.add(btnGo);
+		
+		/**
+		 * Button to add item to order.
+		 */
+		JButton btnAddToOrder = new JButton("add to order");
+		btnAddToOrder.setBounds(57, 242, 150, 23);
+		searchPanel.add(btnAddToOrder);
 		
 		/**
 		 * orderPanel will display the customers current order and total.
