@@ -36,7 +36,8 @@ public class MenuController implements ActionListener{
 			}
 		}
 		
-		menuView.getResultsField().setText(result.getName());
+		menuView.getResultsField().setText(result.getName() + "\t         $" + result.getPrice() + "\t      prep:" +
+				result.getPrepTime() + " minutes" );
 		
 	}
 	

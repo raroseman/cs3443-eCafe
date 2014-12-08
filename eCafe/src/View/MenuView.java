@@ -142,10 +142,7 @@ public class MenuView extends JFrame{
 		return textArea;
 	}
 	
-	public void printcomps() {
-		Component[] components = searchPanel.getComponents();
-		System.out.println(components);
-	}
+	
 	
 	public void registerListener(MenuController controller) {
 		

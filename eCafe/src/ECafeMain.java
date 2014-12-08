@@ -40,7 +40,7 @@ public class ECafeMain {
 		menuView.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		menuView.setVisible(true);
 		
-		menuView.printcomps();
+		
 		
 		controller = new MenuController(restaurant.getMenu(), menuView);
 		menuView.registerListener(controller);
