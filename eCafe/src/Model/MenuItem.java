@@ -87,4 +87,8 @@ public class MenuItem {
 		this.prepTime = prepTime;
 	}
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GETTERS/SETTERS
+	
+	public String toString(){
+		return name + "\nDescription: " + description +"\nPrice: " + price +"\nPrep Time: " + prepTime;
+	}
 }

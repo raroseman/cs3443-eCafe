@@ -3,7 +3,7 @@ package Model;
 public class Ingredient {
 
 	private String name;
-	private String descrip;
+	private String description;
 	private float cost;
 	private int amount;
 
@@ -11,13 +11,13 @@ public class Ingredient {
 	 * Constructor
 	 * 
 	 * @param name
-	 * @param descrip
+	 * @param description
 	 * @param cost
 	 * @param amount
 	 */
-	public Ingredient(String name, String descrip, float cost, int amount) {
+	public Ingredient(String name, String description, float cost, int amount) {
 		this.name = name;
-		this.descrip = descrip;
+		this.description = description;
 		this.cost = cost;
 		this.amount = amount;
 	}
@@ -32,11 +32,11 @@ public class Ingredient {
 	}
 
 	public String getDescrip() {
-		return descrip;
+		return description;
 	}
 
 	public void setDescrip(String descrip) {
-		this.descrip = descrip;
+		this.description = descrip;
 	}
 
 	public float getCost() {
@@ -55,4 +55,8 @@ public class Ingredient {
 		this.amount = amount;
 	}
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GETTERS/SETTERS
+	
+	public String toString(){
+		return name + "\nDescription: " + description +"\nCost: " + cost +"\nAmount: " + amount;
+	}
 }
