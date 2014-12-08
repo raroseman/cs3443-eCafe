@@ -5,6 +5,7 @@ import java.awt.*;
 import javax.swing.AbstractButton;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.*;
@@ -26,6 +27,7 @@ public class MenuView extends JFrame{
 	private JPanel searchPanel;
 	private JPanel orderPanel;
 	private JLabel lblTotal;
+	private JList list;
 	
 	/**
 	 * Create the frame.
@@ -55,10 +57,14 @@ public class MenuView extends JFrame{
 		/**
 		 * Where the results of the search should be populated.
 		 */
-		textArea = new JTextArea();
-		textArea.setEditable(false);
-		textArea.setBounds(58, 69, 298, 161);
-		searchPanel.add(textArea);
+//		textArea = new JTextArea();
+//		textArea.setEditable(false);
+//		textArea.setBounds(58, 69, 298, 161);
+//		searchPanel.add(textArea);
+		
+		list = new JList();
+		list.setBounds(58, 78, 336, 142);
+		searchPanel.add(list);
 		
 		/**
 		 * Where the customer enters the search query.
@@ -176,11 +182,19 @@ public class MenuView extends JFrame{
 		return lblTotal;
 	}
 	
+	/**
+	 * getResultsField returns the text area that holds the results of the search query.
+	 * @return The text area that holds the results of the query.
+	 */
+	public JList getRes() {
+		return list;
+	}
+	
 	public void registerListener(MenuController controller) {
 		
 		Component[] components = searchPanel.getComponents();
 		
-		//components = orderPanel.getComponents();
+		
 		
 		for (Component component : components) {
 			if (component instanceof AbstractButton) {
