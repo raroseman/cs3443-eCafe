@@ -57,6 +57,7 @@ public class Ingredient {
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GETTERS/SETTERS
 	
 	public String toString(){
+		//Test
 		return name + "\nDescription: " + description +"\nCost: " + cost +"\nAmount: " + amount;
 	}
 }

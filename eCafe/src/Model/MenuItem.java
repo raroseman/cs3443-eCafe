@@ -89,6 +89,7 @@ public class MenuItem {
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GETTERS/SETTERS
 	
 	public String toString(){
+		//Test
 		return name + "\nDescription: " + description +"\nPrice: " + price +"\nPrep Time: " + prepTime;
 	}
 }
