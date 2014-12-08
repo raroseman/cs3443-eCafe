@@ -28,6 +28,7 @@ public class MenuView extends JFrame{
 	private JPanel orderPanel;
 	private JLabel lblTotal;
 	private JList list;
+	private JList list2;
 	
 	/**
 	 * Create the frame.
@@ -107,10 +108,14 @@ public class MenuView extends JFrame{
 		/**
 		 * Area to display the ordered items.
 		 */
-		textArea_1 = new JTextArea();
-		textArea_1.setEditable(false);
-		textArea_1.setBounds(76, 33, 223, 198);
-		orderPanel.add(textArea_1);
+//		textArea_1 = new JTextArea();
+//		textArea_1.setEditable(false);
+//		textArea_1.setBounds(76, 33, 223, 198);
+//		orderPanel.add(textArea_1);
+		list2 = new JList();
+		list2.setBounds(76, 33, 223, 198);
+		orderPanel.add(list2);
+		
 		
 		/**
 		 * This should be updated when items are place into order.
@@ -132,6 +137,11 @@ public class MenuView extends JFrame{
 		JButton btnPlaceOrder = new JButton("Place Order!");
 		btnPlaceOrder.setBounds(149, 242, 150, 23);
 		orderPanel.add(btnPlaceOrder);
+		
+		JButton rmvItem = new JButton("remove selected");
+		rmvItem.setBounds(149, 270, 150, 23);
+		orderPanel.add(rmvItem);
+		
 		
 		/**
 		 * Panel that holds the title label.
@@ -183,11 +193,19 @@ public class MenuView extends JFrame{
 	}
 	
 	/**
-	 * getResultsField returns the text area that holds the results of the search query.
-	 * @return The text area that holds the results of the query.
+	 * getRes returns the JList that holds the results of the search query.
+	 * @return The JList that holds the results of the query.
 	 */
 	public JList getRes() {
 		return list;
+	}
+	
+	/**
+	 * getOrd returns the JList that holds items added to the order.
+	 * @return The JList that holds the items added to the order.
+	 */
+	public JList getOrd() {
+		return list2;
 	}
 	
 	public void registerListener(MenuController controller) {

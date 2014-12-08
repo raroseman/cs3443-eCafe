@@ -21,6 +21,7 @@ public class MenuController implements ActionListener{
 	private Menu menu;
 	private double total = 0;
 	private DefaultListModel listModel;
+	private DefaultListModel orderModel;
 	/**
 	 * Constructor takes a menu and menuView as parameters.
 	 * @param menu The menu associated with the restaurant.
@@ -30,6 +31,7 @@ public class MenuController implements ActionListener{
 		this.menu = menu;
 		this.menuView = menuView;
 		listModel = new DefaultListModel();
+		orderModel = new DefaultListModel();
 	}
 	
 	/**
@@ -75,12 +77,15 @@ public class MenuController implements ActionListener{
 		/**
 		 * When the add item button is pressed this action takes place
 		 */
+
+		
 		else if (command.equals("add to order")) {
 			String str = menuView.getRes().getSelectedValue().toString();
 			MenuItem item = map.get(str);
 
 			if (!str.equals("")) {
-				menuView.getOrderField().append(item.getName() + "\t         $" + item.getPrice() +"\n");
+				orderModel.addElement(item.getName() + "\t         $" + item.getPrice() +"\n");
+				menuView.getOrd().setModel(orderModel);
 				total += item.getPrice();
 				String tot = f.format(total);
 				menuView.getTotalLabel().setText("Total: $" + tot);
