@@ -8,20 +8,30 @@ import java.text.DecimalFormat;
 import Model.Menu;
 import Model.MenuItem;
 
+/**
+ * MenuController controls most of the functionality for the menu view.
+ * @author 
+ *
+ */
 public class MenuController implements ActionListener{
 	private MenuView menuView;
 	private Menu menu;
 	private double total = 0;
 	
 	/**
-	 * Constructor
-	 * @param menu
+	 * Constructor takes a menu and menuView as parameters.
+	 * @param menu The menu associated with the restaurant.
+	 * @param menuView The ui.
 	 */
 	public MenuController(Menu menu, MenuView menuView){
 		this.menu = menu;
 		this.menuView = menuView;
 	}
-
+	
+	/**
+	 * actionPerformed method controls the buttons in the menu ui.
+	 * @param ActionEvent e
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		DecimalFormat f = new DecimalFormat("0.##");
@@ -40,12 +50,18 @@ public class MenuController implements ActionListener{
 			}
 		}
 		
+		/**
+		 * When the search button is pressed this action takes place.
+		 */
 		if (command.equals("go!")) {
 			
 			menuView.getResultsField().setText(result.getName() + "\t         $" + result.getPrice() + "\t      prep:" +
 					result.getPrepTime() + " minutes" );
 		}
 		
+		/**
+		 * When the add item button is pressed this action takes place
+		 */
 		else if (command.equals("add to order")) {
 			String str = menuView.getResultsField().getText().trim();
 			if (!str.equals("")) {
@@ -55,6 +71,7 @@ public class MenuController implements ActionListener{
 				menuView.getTotalLabel().setText("Total: $" + tot);
 				
 			}
+			
 		}
 		
 		
