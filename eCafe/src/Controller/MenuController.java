@@ -43,6 +43,7 @@ public class MenuController implements ActionListener{
 		DecimalFormat f = new DecimalFormat("0.##");
 		String command = e.getActionCommand();
 		ArrayList<MenuItem> result = new ArrayList<MenuItem>();
+		ArrayList<MenuItem> order = new ArrayList<MenuItem>();
 		HashMap<String, MenuItem> map = new HashMap<String, MenuItem>();
 		String s = menuView.getSearchField().getText().trim();
 		if (!s.equals("")) {
@@ -54,8 +55,7 @@ public class MenuController implements ActionListener{
 			String itemName = item.getName().toLowerCase();
 			if (itemName.indexOf(s) >= 0) {
 				result.add(item);
-				map.put(item.getName() + "\t         $" + item.getPrice() + "\t      prep:" +
-							item.getPrepTime() + " minutes", item);
+				map.put(item.getName() + "\t         $" + item.getPrice(), item);
 			}
 		}
 		
@@ -67,29 +67,46 @@ public class MenuController implements ActionListener{
 			listModel.removeAllElements();
 			for (MenuItem item : result) {
 				
-				listModel.addElement(item.getName() + "\t         $" + item.getPrice() + "\t      prep:" +
-							item.getPrepTime() + " minutes" );
+				listModel.addElement(item.getName() + "\t         $" + item.getPrice());
 				}
 			
 			menuView.getRes().setModel(listModel);
 			
 		}
-		/**
-		 * When the add item button is pressed this action takes place
-		 */
-
 		
+		
+		/**
+		 * When the add item button is pressed this action takes place.
+		 */
 		else if (command.equals("add to order")) {
 			String str = menuView.getRes().getSelectedValue().toString();
 			MenuItem item = map.get(str);
+			order.add(item);
 
 			if (!str.equals("")) {
-				orderModel.addElement(item.getName() + "\t         $" + item.getPrice() +"\n");
+				orderModel.addElement(item.getName() + "\t         $" + item.getPrice());
 				menuView.getOrd().setModel(orderModel);
 				total += item.getPrice();
 				String tot = f.format(total);
 				menuView.getTotalLabel().setText("Total: $" + tot);
 				
+			}
+		}
+		
+		/**
+		 * When the remove selected button is pressed this action takes place.
+		 */
+		else if (command.equals("remove selected")) {
+			String str = menuView.getOrd().getSelectedValue().toString();
+			MenuItem item = map.get(str);
+			order.remove(item);
+			
+			if (!str.equals("")) {
+				orderModel.removeElement(str);
+				menuView.getOrd().setModel(orderModel);
+				total -= item.getPrice();
+				String tot = f.format(total);
+				menuView.getTotalLabel().setText("Total: $" + tot);
 			}
 		}
 		

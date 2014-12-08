@@ -138,6 +138,9 @@ public class MenuView extends JFrame{
 		btnPlaceOrder.setBounds(149, 242, 150, 23);
 		orderPanel.add(btnPlaceOrder);
 		
+		/**
+		 * Button to remove items from the order.
+		 */
 		JButton rmvItem = new JButton("remove selected");
 		rmvItem.setBounds(149, 270, 150, 23);
 		orderPanel.add(rmvItem);
