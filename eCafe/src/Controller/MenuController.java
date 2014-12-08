@@ -22,6 +22,7 @@ public class MenuController implements ActionListener{
 	private double total = 0;
 	private DefaultListModel listModel;
 	private DefaultListModel orderModel;
+	private ArrayList<MenuItem> order;
 	/**
 	 * Constructor takes a menu and menuView as parameters.
 	 * @param menu The menu associated with the restaurant.
@@ -32,6 +33,16 @@ public class MenuController implements ActionListener{
 		this.menuView = menuView;
 		listModel = new DefaultListModel();
 		orderModel = new DefaultListModel();
+		order = new ArrayList<MenuItem>();
+	}
+	
+	
+	/**
+	 * getOrder gets the ordered items.
+	 * @return ArrayList of ordered items.
+	 */
+	public ArrayList<MenuItem> getOrder() {
+		return order;
 	}
 	
 	/**
@@ -43,7 +54,6 @@ public class MenuController implements ActionListener{
 		DecimalFormat f = new DecimalFormat("0.##");
 		String command = e.getActionCommand();
 		ArrayList<MenuItem> result = new ArrayList<MenuItem>();
-		ArrayList<MenuItem> order = new ArrayList<MenuItem>();
 		HashMap<String, MenuItem> map = new HashMap<String, MenuItem>();
 		String s = menuView.getSearchField().getText().trim();
 		if (!s.equals("")) {
