@@ -122,6 +122,9 @@ public class MenuController implements ActionListener{
 			}
 		}
 		
+		/**
+		 * Add order to the queue
+		 */
 		else if(command.equalsIgnoreCase("Place Order!")){
 			restaurant.placeOrder(order);
 		}
