@@ -11,12 +11,22 @@ import javax.swing.JTextArea;
 import java.awt.Color;
 import java.awt.SystemColor;
 
+
+/**
+ * Displays a static version of the menu.
+ * 
+ *
+ */
 public class StaticMenuView extends JFrame {
 
 	private JPanel contentPane;
 	private Restaurant restaurant;
 	private JTextArea textArea;
 	
+	/**
+	 * Constructor takes a Restaurant object as a argument.
+	 * @param restaurant The restaurant that will be used to populate the menu.
+	 */
 	public StaticMenuView(Restaurant restaurant) {
 		this.restaurant = restaurant;
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -38,6 +48,9 @@ public class StaticMenuView extends JFrame {
 		populateMenu();
 	}
 	
+	/**
+	 * populateMenu method adds items to the frame.
+	 */
 	public void populateMenu() {
 		for (Model.MenuItem item : restaurant.getMenu().getItems()) {
 			textArea.append(item.getName() + "\t\t$" + item.getPrice() + "\n\n");
