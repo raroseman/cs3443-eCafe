@@ -14,7 +14,7 @@ public class ECafeMain {
 	private static KitchenView kitchenView;
 	private static Restaurant restaurant;
 	private static MenuController controller;
-
+//comment
 	public static void main(String[] args) throws SQLException {
 		restaurant = new Restaurant("eCafe - Coffee, Tea, American Fare", 1);
 		
