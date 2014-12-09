@@ -11,6 +11,7 @@ public class ECafeMain {
 	private static DatabaseController db;
 	private static MenuView menuView;
 	private static KitchenView kitchenView;
+	private static DatabaseView databaseView;
 	private static Restaurant restaurant;
 	private static MenuController controller;
 	private static KitchenController kitchenController;
@@ -40,6 +41,11 @@ public class ECafeMain {
 		kitchenView.register(kitchenController);
 		kitchenView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		kitchenView.setVisible(true);
+		
+		databaseView = new DatabaseView(restaurant);
+		databaseView.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		databaseView.setVisible(true);
+		
 
 	}
 
