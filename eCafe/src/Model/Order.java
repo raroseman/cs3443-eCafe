@@ -112,4 +112,20 @@ public class Order {
 	public void removeItem(MenuItem item) {
 		items.remove(item);
 	}
+	
+	/**
+	 * Clears all items from order
+	 */
+	public void clearOrder(){
+		items.clear();
+	}
+	
+	public String toString(){
+		String orderSummary = "Order:\n";
+		for(int i = 0; i < items.size(); i++){
+			orderSummary += items.get(i).toString() + "\n";
+		}
+		return orderSummary + "\n";
+		
+	}
 }

@@ -170,7 +170,7 @@ public class Restaurant {
 	 */
 	public Table getTable(int i) {
 		if (i > 0 && i < tables.length) {
-			return tables[i];
+			return tables[i-1];
 		} else
 			return null;
 	}
