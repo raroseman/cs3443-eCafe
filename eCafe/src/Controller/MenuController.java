@@ -43,7 +43,7 @@ public class MenuController implements ActionListener{
 	
 	/**
 	 * getOrder gets the ordered items.
-	 * @return ArrayList of ordered items.
+	 * @return Order object
 	 */
 	public Order getOrder() {
 		return order;

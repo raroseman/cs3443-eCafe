@@ -16,9 +16,8 @@ public class KitchenController implements ActionListener {
 		
 		public void actionPerformed(ActionEvent e) {
 			String command = e.getActionCommand();
-			if (command == "Serve")
-				//view.populateReadyField("meow");
+			if (command.equalsIgnoreCase("Serve")){
+				view.populateReadyField("meow");
+			}
 		}
 }
-
-

@@ -18,13 +18,13 @@ public class ECafeMain {
 	public static void main(String[] args) throws SQLException {
 		restaurant = new Restaurant("eCafe - Coffee, Tea, American Fare", 1);
 		
-		//db = new DatabaseController("localhost", "ECafe", "root", "", restaurant.getMenu(), restaurant.getInventory());
+		db = new DatabaseController("localhost", "ECafe", "root", "", restaurant.getMenu(), restaurant.getInventory());
 		
-		//while(!db.attemptConnection());
+		while(!db.attemptConnection());
 		
-		//db.pullMenu();
+		db.pullMenu();
 		
-		//db.pullInventory();
+		db.pullInventory();
 		
 		System.out.println("Menu Items:\n");
 		for (int i = 0; i < restaurant.getMenu().getItems().size(); i++) {
@@ -40,13 +40,12 @@ public class ECafeMain {
 		menuView.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		menuView.setVisible(true);
 		
-		
-		
 		controller = new MenuController(restaurant.getMenu(), menuView, restaurant);
 		menuView.registerListener(controller);
 
 		kitchenView = new KitchenView();
-		//kitchenController = new KitchenController(kitchenView);
+		kitchenController = new KitchenController(kitchenView);
+		kitchenView.register(kitchenController);
 		kitchenView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		kitchenView.setVisible(true);
 
