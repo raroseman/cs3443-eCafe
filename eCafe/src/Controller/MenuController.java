@@ -1,5 +1,6 @@
 package Controller;
 import View.MenuView;
+import View.StaticMenuView;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -129,6 +130,11 @@ public class MenuController implements ActionListener{
 			restaurant.placeOrder(order);
 		}
 		
+		
+		else if (command.equals("view menu")) {
+			StaticMenuView menu =  new StaticMenuView(restaurant);
+			menu.setVisible(true);
+		}
 		
 	}
 	
