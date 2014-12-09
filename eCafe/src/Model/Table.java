@@ -1,6 +1,11 @@
 package Model;
 
 //import java.util.ArrayList;
+/**
+ * Class to manage information about a table.
+ * @author All
+ *
+ */
 
 public class Table {
 
@@ -10,6 +15,10 @@ public class Table {
 
 	private Order order;
 
+	/**
+	 * Constructor
+	 * @param ID
+	 */
 	public Table(int ID) {
 		this.ID = ID;
 	}

@@ -2,6 +2,12 @@ package Model;
 
 import java.util.ArrayList;
 
+/**
+ * Class to manage everything about the restaurant
+ * including the menu, inventory, and account.
+ * @author All
+ *
+ */
 public class Restaurant {
 	private String name;
 
@@ -12,6 +18,10 @@ public class Restaurant {
 	private ArrayList<Order> queue;
 	private Table[] tables;
 
+	/**
+	 * Constructor to initialize the name to name.
+	 * @param name
+	 */
 	public Restaurant(String name) {
 		this.name = name;
 		menu = new Menu();
@@ -19,7 +29,13 @@ public class Restaurant {
 		account = new Account();
 		queue = new ArrayList<Order>();
 	}
-
+	
+    /**
+     * Constructor that initialize the name
+     * and the number of tables.
+     * @param name
+     * @param numTables
+     */
 	public Restaurant(String name, int numTables) {
 		this.name = name;
 		menu = new Menu();
@@ -147,6 +163,11 @@ public class Restaurant {
 		return tables.length;
 	}
 
+	/**
+	 * Get the specified table
+	 * @param i
+	 * @return
+	 */
 	public Table getTable(int i) {
 		if (i > 0 && i < tables.length) {
 			return tables[i];

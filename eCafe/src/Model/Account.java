@@ -1,5 +1,13 @@
 package Model;
 
+/**
+ * Class to keep track of the cash coming in
+ * versus cash out.
+ * 
+ * @author Michael Schappel, Laura Aquino, Keith Cruz,
+ * 		   Ryan Roseman, 
+ *
+ */
 public class Account {
 	private double cash;
 
@@ -12,7 +20,7 @@ public class Account {
 	}
 
 	/**
-	 * Constructor to initialize it to
+	 * Constructor to initialize account to
 	 * cash
 	 * @param cash
 	 */

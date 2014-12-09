@@ -2,10 +2,19 @@ package Model;
 
 import java.util.ArrayList;
 
+/**
+ * Class to manipulate the menu.
+ * 
+ * @author All
+ *
+ */
 public class Menu {
 	private ArrayList<MenuItem> items;
 	private ArrayList<MenuSpecial> specials;
 
+	/**
+	 * Constructor
+	 */
 	public Menu() {
 		items = new ArrayList<MenuItem>();
 		specials = new ArrayList<MenuSpecial>();

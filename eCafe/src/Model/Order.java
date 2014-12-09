@@ -2,12 +2,22 @@ package Model;
 
 import java.util.ArrayList;
 
+/**
+ * Class to manage the orders. 
+ * 
+ * @author All
+ *
+ */
 public class Order {
 	private Table source;
 	private boolean complete;
 	private float time;
 	private ArrayList<MenuItem> items;
-
+	
+    /**
+     * Constructor
+     * @param source
+     */
 	public Order(Table source) {
 		this.source = source;
 		items = new ArrayList<MenuItem>();
@@ -86,10 +96,19 @@ public class Order {
 
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GETTERS/SETTERS
 
+	/**
+	 * Add the menu item to the items ArrayList
+	 * .
+	 * @param item
+	 */
 	public void addItem(MenuItem item) {
 		items.add(item);
 	}
 
+	/**
+	 * Remove the menu item from the items ArrayList.
+	 * @param item
+	 */
 	public void removeItem(MenuItem item) {
 		items.remove(item);
 	}

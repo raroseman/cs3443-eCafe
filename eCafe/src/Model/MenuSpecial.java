@@ -2,6 +2,13 @@ package Model;
 
 import java.util.ArrayList;
 
+/**
+ * Class to get and set the item for the 
+ * menu special.
+ * 
+ * @author All
+ *
+ */
 public class MenuSpecial {
 	private MenuItem[] items;
 	private float price;

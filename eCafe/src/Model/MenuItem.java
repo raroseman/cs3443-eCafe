@@ -1,5 +1,12 @@
 package Model;
 
+/**
+ * Class to manipulate information about
+ * a menu item.
+ * 
+ * @author All
+ *
+ */
 public class MenuItem {
 	private String name;
 	private String description;
@@ -88,6 +95,10 @@ public class MenuItem {
 	}
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GETTERS/SETTERS
 	
+	/**
+	 * Print the information for the menu item.
+	 * @return name, description, price, and prepTime 
+	 */
 	public String toString(){
 		//Test
 		return name + "\nDescription: " + description +"\nPrice: " + price +"\nPrep Time: " + prepTime;
