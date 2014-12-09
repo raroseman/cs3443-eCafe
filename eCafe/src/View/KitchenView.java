@@ -3,17 +3,25 @@ package View;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
 import java.awt.Color;
+
 import javax.swing.JLabel;
+
 import java.awt.Font;
+
 import javax.swing.JTextArea;
+
+import Controller.KitchenController;
 
 public class KitchenView extends JFrame{
 	private JPanel kitchenFrame;
-	
+	private JButton btnServe;
+	private JTextArea readyArea;
 	
 	/**
 	 * Create the frame.
@@ -45,6 +53,12 @@ public class KitchenView extends JFrame{
 		JLabel lblProcessing = new JLabel("Processing");
 		lblProcessing.setBounds(32, 11, 73, 14);
 		processingPanel.add(lblProcessing);
+		/**
+		 * Button to move from processing to ready
+		 */
+		btnServe = new JButton("Serve");
+		btnServe.setBounds(388, 323, 80, 23);
+		kitchenFrame.add(btnServe);
 		
 		/**
 		 * Orders processing should appear here.
@@ -73,7 +87,7 @@ public class KitchenView extends JFrame{
 		/**
 		 * Ready orders should appear here.
 		 */
-		JTextArea readyArea = new JTextArea();
+		readyArea = new JTextArea();
 		readyArea.setEditable(false);
 		readyArea.setBounds(37, 42, 388, 194);
 		readyPanel.add(readyArea);
@@ -95,5 +109,12 @@ public class KitchenView extends JFrame{
 		lblKitchen.setBounds(191, 23, 82, 21);
 		titlePanel.add(lblKitchen);
 	}
-
+	
+	public void register(KitchenController controller) {
+    	btnServe.addActionListener(controller);
+    }
+	
+	public void populateReadyField(String text) {
+		readyArea.append(text + "\n");
+	}
 }
