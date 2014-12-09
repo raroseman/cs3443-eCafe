@@ -10,6 +10,8 @@ import javax.swing.DefaultListModel;
 
 import Model.Menu;
 import Model.MenuItem;
+import Model.Order;
+import Model.Restaurant;
 
 /**
  * MenuController controls most of the functionality for the menu view.
@@ -22,18 +24,20 @@ public class MenuController implements ActionListener{
 	private double total = 0;
 	private DefaultListModel listModel;
 	private DefaultListModel orderModel;
-	private ArrayList<MenuItem> order;
+	private Order order;
+	private Restaurant restaurant;
 	/**
 	 * Constructor takes a menu and menuView as parameters.
 	 * @param menu The menu associated with the restaurant.
 	 * @param menuView The ui.
 	 */
-	public MenuController(Menu menu, MenuView menuView){
+	public MenuController(Menu menu, MenuView menuView, Restaurant restaurant){
 		this.menu = menu;
 		this.menuView = menuView;
 		listModel = new DefaultListModel();
 		orderModel = new DefaultListModel();
-		order = new ArrayList<MenuItem>();
+		this.restaurant = restaurant;
+		order = new Order(restaurant.getTable(menuView.getTable()));
 	}
 	
 	
@@ -41,7 +45,7 @@ public class MenuController implements ActionListener{
 	 * getOrder gets the ordered items.
 	 * @return ArrayList of ordered items.
 	 */
-	public ArrayList<MenuItem> getOrder() {
+	public Order getOrder() {
 		return order;
 	}
 	
@@ -88,28 +92,26 @@ public class MenuController implements ActionListener{
 		/**
 		 * When the add item button is pressed this action takes place.
 		 */
-		else if (command.equals("add to order")) {
+		else if (command.equalsIgnoreCase("add to order")) {
 			String str = menuView.getRes().getSelectedValue().toString();
 			MenuItem item = map.get(str);
-			order.add(item);
-
+			order.addItem(item);
 			if (!str.equals("")) {
 				orderModel.addElement(item.getName() + "\t         $" + item.getPrice());
 				menuView.getOrd().setModel(orderModel);
 				total += item.getPrice();
 				String tot = f.format(total);
 				menuView.getTotalLabel().setText("Total: $" + tot);
-				
 			}
 		}
 		
 		/**
 		 * When the remove selected button is pressed this action takes place.
 		 */
-		else if (command.equals("remove selected")) {
+		else if (command.equalsIgnoreCase("remove selected")) {
 			String str = menuView.getOrd().getSelectedValue().toString();
 			MenuItem item = map.get(str);
-			order.remove(item);
+			order.removeItem(item);
 			
 			if (!str.equals("")) {
 				orderModel.removeElement(str);
@@ -118,6 +120,10 @@ public class MenuController implements ActionListener{
 				String tot = f.format(total);
 				menuView.getTotalLabel().setText("Total: $" + tot);
 			}
+		}
+		
+		else if(command.equalsIgnoreCase("Place Order!")){
+			restaurant.placeOrder(order);
 		}
 		
 		

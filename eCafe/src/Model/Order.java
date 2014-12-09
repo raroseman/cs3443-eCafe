@@ -21,7 +21,7 @@ public class Order {
 	public Table getSource() {
 		return source;
 	}
-    
+
 	/**
 	 * 
 	 * @param source
@@ -32,6 +32,7 @@ public class Order {
 
 	/**
 	 * Check if order is complete.
+	 * 
 	 * @return complete
 	 */
 	public boolean isComplete() {
@@ -40,6 +41,7 @@ public class Order {
 
 	/**
 	 * Set the order to complete.
+	 * 
 	 * @param complete
 	 */
 	public void setComplete(boolean complete) {
@@ -48,6 +50,7 @@ public class Order {
 
 	/**
 	 * Get the time for the order.
+	 * 
 	 * @return time
 	 */
 	public float getTime() {
@@ -56,6 +59,7 @@ public class Order {
 
 	/**
 	 * Set the time for the order.
+	 * 
 	 * @param time
 	 */
 	public void setTime(float time) {
@@ -64,6 +68,7 @@ public class Order {
 
 	/**
 	 * Get the order items.
+	 * 
 	 * @return
 	 */
 	public ArrayList<MenuItem> getItems() {
@@ -72,10 +77,20 @@ public class Order {
 
 	/**
 	 * Set the items for the order.
+	 * 
 	 * @param items
 	 */
 	public void setItems(ArrayList<MenuItem> items) {
 		this.items = items;
 	}
+
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GETTERS/SETTERS
+
+	public void addItem(MenuItem item) {
+		items.add(item);
+	}
+
+	public void removeItem(MenuItem item) {
+		items.remove(item);
+	}
 }

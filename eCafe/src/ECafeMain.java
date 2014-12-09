@@ -42,7 +42,7 @@ public class ECafeMain {
 		
 		
 		
-		controller = new MenuController(restaurant.getMenu(), menuView);
+		controller = new MenuController(restaurant.getMenu(), menuView, restaurant);
 		menuView.registerListener(controller);
 
 		kitchenView = new KitchenView();

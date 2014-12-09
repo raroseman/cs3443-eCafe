@@ -32,6 +32,7 @@ public class Restaurant {
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GETTERS/SETTERS
 	/**
 	 * Get the restaurant name.
+	 * 
 	 * @return name
 	 */
 	public String getName() {
@@ -40,6 +41,7 @@ public class Restaurant {
 
 	/**
 	 * Set the restaurant name.
+	 * 
 	 * @param name
 	 */
 	public void setName(String name) {
@@ -48,6 +50,7 @@ public class Restaurant {
 
 	/**
 	 * Get the menu.
+	 * 
 	 * @return menu
 	 */
 	public Menu getMenu() {
@@ -56,6 +59,7 @@ public class Restaurant {
 
 	/**
 	 * Set the menu.
+	 * 
 	 * @param menu
 	 */
 	public void setMenu(Menu menu) {
@@ -64,6 +68,7 @@ public class Restaurant {
 
 	/**
 	 * Get the inventory.
+	 * 
 	 * @return inventory
 	 */
 	public Inventory getInventory() {
@@ -72,6 +77,7 @@ public class Restaurant {
 
 	/**
 	 * Set the inventory.
+	 * 
 	 * @param inventory
 	 */
 	public void setInventory(Inventory inventory) {
@@ -80,6 +86,7 @@ public class Restaurant {
 
 	/**
 	 * Get the account.
+	 * 
 	 * @return account
 	 */
 	public Account getAccount() {
@@ -88,6 +95,7 @@ public class Restaurant {
 
 	/**
 	 * Set the account.
+	 * 
 	 * @param account
 	 */
 	public void setAccount(Account account) {
@@ -96,6 +104,7 @@ public class Restaurant {
 
 	/**
 	 * Get the order queue.
+	 * 
 	 * @return queue
 	 */
 	public ArrayList<Order> getQueue() {
@@ -104,6 +113,7 @@ public class Restaurant {
 
 	/**
 	 * Set the order queue.
+	 * 
 	 * @param queue
 	 */
 	public void setQueue(ArrayList<Order> queue) {
@@ -112,6 +122,7 @@ public class Restaurant {
 
 	/**
 	 * Get the tables.
+	 * 
 	 * @return tables
 	 */
 	public Table[] getTables() {
@@ -120,6 +131,7 @@ public class Restaurant {
 
 	/**
 	 * Set the number of tables.
+	 * 
 	 * @param tables
 	 */
 	public void setTables(Table[] tables) {
@@ -128,10 +140,18 @@ public class Restaurant {
 
 	/**
 	 * Get the number of tables
+	 * 
 	 * @return number of tables
 	 */
 	public int getNumTables() {
 		return tables.length;
+	}
+
+	public Table getTable(int i) {
+		if (i > 0 && i < tables.length) {
+			return tables[i];
+		} else
+			return null;
 	}
 
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GETTERS/SETTERS
@@ -139,6 +159,7 @@ public class Restaurant {
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~UTILITY
 	/**
 	 * Create specified number of tables.
+	 * 
 	 * @param numTables
 	 */
 	private void createTables(int numTables) {
@@ -150,6 +171,7 @@ public class Restaurant {
 
 	/**
 	 * Place an order and add to queue.
+	 * 
 	 * @param order
 	 */
 	public void placeOrder(Order order) {
@@ -158,8 +180,8 @@ public class Restaurant {
 	}
 
 	/**
-	 * The order has been fulfilled and removed
-	 * from the order queue.
+	 * The order has been fulfilled and removed from the order queue.
+	 * 
 	 * @param order
 	 */
 	public void orderFulfilled(Order order) {
