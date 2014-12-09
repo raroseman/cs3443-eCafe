@@ -54,6 +54,7 @@ public class KitchenView extends JFrame{
 		JLabel lblProcessing = new JLabel("Processing");
 		lblProcessing.setBounds(32, 11, 73, 14);
 		processingPanel.add(lblProcessing);
+		
 		/**
 		 * Button to move from processing to ready
 		 */
