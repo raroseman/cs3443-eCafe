@@ -43,7 +43,7 @@ public class KitchenController implements ActionListener {
 		return restaurant.getName();
 	}
 
-	private void displayOrders() {
+	void displayOrders() {
 		for (Order o : orderQueue) {
 			view.populateProcessingField(o.toString());
 		}
