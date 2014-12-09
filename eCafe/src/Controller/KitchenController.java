@@ -18,18 +18,23 @@ public class KitchenController implements ActionListener {
 		public KitchenController(KitchenView view, Restaurant restaurant) {
 			this.view = view;
 			this.restaurant = restaurant;
-			orderQueue = restaurant.getQueue();	
+			orderQueue = restaurant.getQueue();
+			
 		}
 		
 		public void actionPerformed(ActionEvent e) {
 			String command = e.getActionCommand();
 			if (command.equalsIgnoreCase("Serve")) {
 				view.populateReadyField(restaurant.getName());
-				//for (MenuItem i; i < orderQueue.size(); i++)
-				//	itemsQueue.add(i);
+				for (Order o : orderQueue) {
+					//itemsQueue = o.getItems();
+					System.out.println(o.getItems());
+					o.getItems().clear();
+					
+				}
 			}
 		}
-		
+
 		public void getOrder() {
 			orderQueue = restaurant.getQueue();
 		}

@@ -131,7 +131,7 @@ public class MenuController implements ActionListener{
 		}
 		
 		/**
-		 * Shows the menu when view menu is pushed.
+		 * Shows the menu when view menu is pushed
 		 */
 		else if (command.equals("view menu")) {
 			StaticMenuView menu =  new StaticMenuView(restaurant);
