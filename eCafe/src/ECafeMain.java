@@ -45,6 +45,8 @@ public class ECafeMain {
 
 		kitchenView = new KitchenView();
 		kitchenController = new KitchenController(kitchenView);
+		
+		//register added
 		kitchenView.register(kitchenController);
 		kitchenView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		kitchenView.setVisible(true);
