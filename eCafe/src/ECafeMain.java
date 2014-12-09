@@ -26,16 +26,6 @@ public class ECafeMain {
 		
 		db.pullInventory();
 		
-		System.out.println("Menu Items:\n");
-		for (int i = 0; i < restaurant.getMenu().getItems().size(); i++) {
-			System.out.println(restaurant.getMenu().getItems().get(i).toString() + "\n");
-		}
-		
-		System.out.println("Ingredients:\n");
-		for (int i = 0; i < restaurant.getInventory().getIngredients().size(); i++) {
-			System.out.println(restaurant.getInventory().getIngredients().get(i).toString() + "\n");
-		}
-		
 		menuView = new MenuView(1, restaurant);
 		menuView.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		menuView.setVisible(true);
