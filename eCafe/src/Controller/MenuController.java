@@ -130,7 +130,9 @@ public class MenuController implements ActionListener{
 			restaurant.placeOrder(order);
 		}
 		
-		
+		/**
+		 * Shows the menu when view menu is pushed.
+		 */
 		else if (command.equals("view menu")) {
 			StaticMenuView menu =  new StaticMenuView(restaurant);
 			menu.setVisible(true);
