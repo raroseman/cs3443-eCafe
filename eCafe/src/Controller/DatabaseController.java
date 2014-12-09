@@ -1,5 +1,7 @@
 package Controller;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.*;
 
 import Model.Inventory;
@@ -11,7 +13,7 @@ import Model.Menu;
  * @author All Test
  *
  */
-public class DatabaseController {
+public class DatabaseController implements ActionListener{
 	private String host;
 	private String database;
 	private String username;
@@ -80,6 +82,12 @@ public class DatabaseController {
 						+ " WHERE `Name`=" + name);
 		set.close();
 		return false;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent act) {
+		//do nothing
+		
 	}
 
 }

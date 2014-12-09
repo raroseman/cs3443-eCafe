@@ -44,7 +44,7 @@ public class ECafeMain {
 		menuView.registerListener(controller);
 
 		kitchenView = new KitchenView();
-		kitchenController = new KitchenController(kitchenView);
+		kitchenController = new KitchenController(kitchenView, restaurant);
 		
 		//register added
 		kitchenView.register(kitchenController);

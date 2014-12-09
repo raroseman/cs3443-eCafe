@@ -27,6 +27,7 @@ public class KitchenView extends JFrame{
 	 * Create the frame.
 	 */
 	public KitchenView() {
+		super("Kitchen");
 		/**
 		 * Building the kitchenFrame to hold the components of processinghPanel and readyPanel.
 		 */
