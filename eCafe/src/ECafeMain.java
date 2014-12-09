@@ -36,7 +36,7 @@ public class ECafeMain {
 		
 		menuController = new MenuController(restaurant.getMenu(), menuView, restaurant, kitchenController);
 		menuView.registerListener(menuController);
-		
+
 		kitchenView.register(kitchenController);
 		kitchenView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		kitchenView.setVisible(true);

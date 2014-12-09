@@ -30,20 +30,15 @@ public class MenuController implements ActionListener {
 	private DefaultListModel orderModel;
 	private Order order;
 	private Restaurant restaurant;
+
 	private KitchenController kControl;
 
-	/**
-	 * Constructor takes a menu and menuView as parameters.
-	 * 
-	 * @param menu
-	 *            The menu associated with the restaurant.
-	 * @param menuView
-	 *            The ui.
-	 */
 	public MenuController(Menu menu, MenuView menuView, Restaurant restaurant,
 			KitchenController kControl) {
+
 		this.menu = menu;
 		this.menuView = menuView;
+		this.kControl = kControl;
 		listModel = new DefaultListModel();
 		orderModel = new DefaultListModel();
 		this.restaurant = restaurant;
@@ -109,14 +104,14 @@ public class MenuController implements ActionListener {
 				String str = menuView.getRes().getSelectedValue().toString();
 				MenuItem item = map.get(str);
 				order.addItem(item);
-				//if (!str.equals("")) {
-					orderModel.addElement(item.getName() + "\t         $"
-							+ item.getPrice());
-					menuView.getOrd().setModel(orderModel);
-					total += item.getPrice();
-					String tot = f.format(total);
-					menuView.getTotalLabel().setText("Total: $" + tot);
-				//}
+				// if (!str.equals("")) {
+				orderModel.addElement(item.getName() + "\t         $"
+						+ item.getPrice());
+				menuView.getOrd().setModel(orderModel);
+				total += item.getPrice();
+				String tot = f.format(total);
+				menuView.getTotalLabel().setText("Total: $" + tot);
+				// }
 			}
 		}
 
@@ -142,11 +137,12 @@ public class MenuController implements ActionListener {
 		/**
 		 * Add order to the queue
 		 */
+
 		else if (command.equalsIgnoreCase("Place Order!")) {
 			if (!order.getItems().isEmpty()) {
 				restaurant.placeOrder(order);
 				kControl.getOrder();
-				//order.clearOrder();
+				// order.clearOrder();
 				orderModel.clear();
 			} else {
 				// nothing
@@ -162,5 +158,4 @@ public class MenuController implements ActionListener {
 		}
 
 	}
-
 }

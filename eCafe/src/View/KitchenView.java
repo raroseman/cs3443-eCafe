@@ -22,6 +22,7 @@ public class KitchenView extends JFrame{
 	private JPanel kitchenFrame;
 	private JButton btnServe;
 	private JTextArea processingArea, readyArea;
+
 	
 	/**
 	 * Create the frame.
@@ -59,7 +60,7 @@ public class KitchenView extends JFrame{
 		 * Button to move from processing to ready
 		 */
 		btnServe = new JButton("Serve");
-		btnServe.setBounds(388, 323, 80, 23);
+		btnServe.setBounds(368, 323, 80, 23);
 		kitchenFrame.add(btnServe);
 		
 		/**
@@ -114,7 +115,11 @@ public class KitchenView extends JFrame{
 	
 	public void register(KitchenController controller) {
     	btnServe.addActionListener(controller);
-    }
+    }	
+	
+	public void populateProcessField(String text) {
+		processingArea.append(text + "\n");
+	}
 	
 	public void populateReadyField(String text) {
 		readyArea.append(text + "\n");
