@@ -27,14 +27,16 @@ public class MenuController implements ActionListener{
 	private DefaultListModel orderModel;
 	private Order order;
 	private Restaurant restaurant;
+	private KitchenController kitchenController;
 	/**
 	 * Constructor takes a menu and menuView as parameters.
 	 * @param menu The menu associated with the restaurant.
 	 * @param menuView The ui.
 	 */
-	public MenuController(Menu menu, MenuView menuView, Restaurant restaurant){
+	public MenuController(Menu menu, MenuView menuView, KitchenController kitchenController, Restaurant restaurant){
 		this.menu = menu;
 		this.menuView = menuView;
+		this.kitchenController = kitchenController;
 		listModel = new DefaultListModel();
 		orderModel = new DefaultListModel();
 		this.restaurant = restaurant;
@@ -127,7 +129,9 @@ public class MenuController implements ActionListener{
 		 * Add order to the queue
 		 */
 		else if(command.equalsIgnoreCase("Place Order!")){
-			restaurant.placeOrder(order);			
+			restaurant.placeOrder(order);
+			kitchenController.displayOrders();
+			
 		}
 		
 		/**

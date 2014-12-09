@@ -31,12 +31,12 @@ public class ECafeMain {
 		menuView.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		menuView.setVisible(true);
 		
-		controller = new MenuController(restaurant.getMenu(), menuView, restaurant);
-		menuView.registerListener(controller);
-
 		kitchenView = new KitchenView();
 		kitchenController = new KitchenController(kitchenView, restaurant);
 		
+		controller = new MenuController(restaurant.getMenu(), menuView, kitchenController, restaurant);
+		menuView.registerListener(controller);
+	
 		kitchenView.register(kitchenController);
 		kitchenView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		kitchenView.setVisible(true);

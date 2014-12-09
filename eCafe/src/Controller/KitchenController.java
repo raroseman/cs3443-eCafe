@@ -25,14 +25,7 @@ public class KitchenController implements ActionListener {
 			String command = e.getActionCommand();
 			if (command.equalsIgnoreCase("Serve")) {
 				view.populateReadyField(restaurant.getName());
-				for (Order o : orderQueue) {
-					itemsQueue = o.getItems();
-					//System.out.println(o.getItems());
-					for (MenuItem i : itemsQueue) {
-						System.out.println(i.getName());
-					}
-					o.getItems().clear();	
-				}
+				
 			}
 		}
 
@@ -44,9 +37,15 @@ public class KitchenController implements ActionListener {
 			return restaurant.getName();
 		}
 		
-		/*
-		 * public void displayOrders(){
-		 * 		Display orders from Restaurant.getQueue()
-		 * }
-		 */
+		
+		  public void displayOrders(){
+			  for (Order o : orderQueue) {
+				  itemsQueue = o.getItems();
+				  for (MenuItem i : itemsQueue) {
+					  view.populateProcessField(i.getName());
+				  }
+				  o.getItems().clear();	
+			  }
+		  }
+		 
 }
