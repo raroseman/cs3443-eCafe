@@ -99,6 +99,10 @@ public class MenuView extends JFrame {
 		JButton btnAddToOrder = new JButton("add to order");
 		btnAddToOrder.setBounds(57, 242, 150, 23);
 		searchPanel.add(btnAddToOrder);
+		
+		JButton viewMenu = new JButton("view menu");
+		viewMenu.setBounds(57, 270, 150, 23);
+		searchPanel.add(viewMenu);
 
 		/**
 		 * orderPanel will display the customers current order and total.
