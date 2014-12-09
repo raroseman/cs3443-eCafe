@@ -58,6 +58,7 @@ public class MenuController implements ActionListener{
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		try {
 		DecimalFormat f = new DecimalFormat("0.##");
 		String command = e.getActionCommand();
 		ArrayList<MenuItem> result = new ArrayList<MenuItem>();
@@ -141,7 +142,9 @@ public class MenuController implements ActionListener{
 			StaticMenuView menu =  new StaticMenuView(restaurant);
 			menu.setVisible(true);
 		}
-		
+		} catch (NullPointerException x) {
+			
+		}
 	}
 	
 }
