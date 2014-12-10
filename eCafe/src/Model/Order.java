@@ -19,7 +19,7 @@ public class Order {
      * @param source
      */
 	public Order(Table source) {
-		this.source = source;
+		source = new Table(1);
 		items = new ArrayList<MenuItem>();
 	}
 

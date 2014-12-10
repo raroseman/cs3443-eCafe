@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 import Model.MenuItem;
 import Model.Order;
@@ -18,28 +17,35 @@ public class KitchenController implements ActionListener {
 	private ArrayList<Order> orderQueue = new ArrayList<Order>();
 	private ArrayList<MenuItem> itemsQueue = new ArrayList<MenuItem>();
 	private Calendar cal = Calendar.getInstance();
-	private int orderNumber = 1;
+	private int receiveNumber = 1;
+	private int serveNumber = 1;
 
+	/**
+	 * Constructor
+	 * @param view
+	 * @param restaurant
+	 */
 	public KitchenController(KitchenView view, Restaurant restaurant) {
 		this.view = view;
 		this.restaurant = restaurant;
 		orderQueue = restaurant.getQueue();
 	}
 
+	/**
+	 * Serves first order in
+	 */
 	public void actionPerformed(ActionEvent e) {
 		String command = e.getActionCommand();
 		if (command.equalsIgnoreCase("Serve")) {
 			if (!orderQueue.isEmpty()) {
 				displayReadyOrders();
-				//view.populateReadyField(orderQueue.get(0).toString());
-				//orderQueue.get(0).clearOrder();
-				//orderQueue.remove(0);
-				//restaurant.setQueue(orderQueue);
-				//view.clearProcessingArea();
 			}
 		}
 	}
 	
+	/**
+	 * Pulls orders from restaurant class
+	 */
 	public void getOrder() {
 		orderQueue = restaurant.getQueue();
 	}
@@ -49,31 +55,33 @@ public class KitchenController implements ActionListener {
 	}
 
 	void displayProcessOrders() {
-		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-		view.populateProcessingField("Order #" + orderNumber + "     Time in: " + sdf.format(cal.getTime()) + "      Table: " + restaurant.getName());
-		view.populateProcessingField("---------------------------------------------------------------------------------------------------");
-		orderNumber++;
-		for (Order o : orderQueue) {
+		view.clearProcessingArea();
+		if (!orderQueue.isEmpty()) {
+			SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+			receiveNumber = serveNumber;
+			for (Order o : orderQueue) {
 				itemsQueue = o.getItems();
-			for (MenuItem i : itemsQueue) {
-				view.populateProcessingField(i.getName());
+				view.populateProcessField("Order #" + (receiveNumber++)
+						+ "     Time in: " + sdf.format(cal.getTime())
+						+ "      Table: 1\n");
+				view.populateProcessField("---------------------------------------------------------------------------------------------------\n");
+				for (MenuItem i : itemsQueue) {
+					view.populateProcessField(i.getName() + "\n");
+				}
+				view.populateProcessField("\n");
 			}
-			o.getItems().clear();
 		}
-		view.populateProcessingField("\n");	
 	}
-	
+
 	void displayReadyOrders() {
 		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-		view.populateReadyField("Order #" + (orderNumber - 1) + " Complete!     Time out: " + sdf.format(cal.getTime()) + "      Table: " + restaurant.getName());
+		view.populateReadyField("Order #" + (serveNumber++)
+				+ " Complete!     Time out: " + sdf.format(cal.getTime())
+				+ "      Table: 1");
 		view.populateReadyField("---------------------------------------------------------------------------------------------------");
-		//for (Order o : orderQueue) {
-		//		itemsQueue = o.getItems();
-		//	for (MenuItem i : itemsQueue) {
-		//		view.populateReadyField(i.getName());
-		//	}
-		//	o.getItems().clear();
-		//}
-		view.populateReadyField("\n");	
+		view.populateReadyField("\n");
+		orderQueue.get(0).setComplete(true);
+		orderQueue.remove(0);
+		displayProcessOrders();
 	}
 }
