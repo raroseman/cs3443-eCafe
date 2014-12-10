@@ -12,6 +12,7 @@ import javax.swing.DefaultListModel;
 import Model.Menu;
 import Model.MenuItem;
 import Model.Order;
+import Model.ProcessingTimer;
 import Model.Restaurant;
 
 /**
@@ -27,14 +28,17 @@ public class MenuController implements ActionListener{
 	private DefaultListModel orderModel;
 	private Order order;
 	private Restaurant restaurant;
+	private KitchenController kitchenController;
+	private ProcessingTimer orderTimer = new ProcessingTimer(10);
 	/**
 	 * Constructor takes a menu and menuView as parameters.
 	 * @param menu The menu associated with the restaurant.
 	 * @param menuView The ui.
 	 */
-	public MenuController(Menu menu, MenuView menuView, Restaurant restaurant){
+	public MenuController(Menu menu, MenuView menuView, KitchenController kitchenController, Restaurant restaurant){
 		this.menu = menu;
 		this.menuView = menuView;
+		this.kitchenController = kitchenController;
 		listModel = new DefaultListModel();
 		orderModel = new DefaultListModel();
 		this.restaurant = restaurant;
@@ -56,6 +60,7 @@ public class MenuController implements ActionListener{
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		try {
 		DecimalFormat f = new DecimalFormat("0.##");
 		String command = e.getActionCommand();
 		ArrayList<MenuItem> result = new ArrayList<MenuItem>();
@@ -128,16 +133,24 @@ public class MenuController implements ActionListener{
 		 */
 		else if(command.equalsIgnoreCase("Place Order!")){
 			restaurant.placeOrder(order);
+			kitchenController.displayProcessOrders();
+			orderModel.clear();
+			menuView.getOrd().setModel(orderModel);
+			total = 0;
+			String tot = f.format(total);
+			menuView.getTotalLabel().setText("Total: $" + tot);	
 		}
 		
 		/**
-		 * Shows the menu when view menu is pushed.
+		 * Shows the menu when view menu is pushed
 		 */
 		else if (command.equals("view menu")) {
 			StaticMenuView menu =  new StaticMenuView(restaurant);
 			menu.setVisible(true);
 		}
-		
+		} catch (NullPointerException x) {
+			
+		}
 	}
 	
 }

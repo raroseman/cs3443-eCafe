@@ -13,7 +13,7 @@ public class ECafeMain {
 	private static KitchenView kitchenView;
 	private static DatabaseView databaseView;
 	private static Restaurant restaurant;
-	private static MenuController controller;
+	private static MenuController menuController;
 	private static KitchenController kitchenController;
 
 	public static void main(String[] args) throws SQLException {
@@ -31,12 +31,12 @@ public class ECafeMain {
 		menuView.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		menuView.setVisible(true);
 		
-		controller = new MenuController(restaurant.getMenu(), menuView, restaurant);
-		menuView.registerListener(controller);
-
 		kitchenView = new KitchenView();
 		kitchenController = new KitchenController(kitchenView, restaurant);
 		
+		menuController = new MenuController(restaurant.getMenu(), menuView, kitchenController, restaurant);
+		menuView.registerListener(menuController);
+
 		kitchenView.register(kitchenController);
 		kitchenView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		kitchenView.setVisible(true);
