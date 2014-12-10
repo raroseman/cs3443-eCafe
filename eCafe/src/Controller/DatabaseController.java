@@ -8,12 +8,12 @@ import Model.Inventory;
 import Model.Menu;
 
 /**
- * Executes database queries
+ * This class executes database queries
  * 
- * @author All Test
+ * @author All
  *
  */
-public class DatabaseController implements ActionListener{
+public class DatabaseController {
 	private String host;
 	private String database;
 	private String username;
@@ -21,7 +21,16 @@ public class DatabaseController implements ActionListener{
 	private Connection connection;
 	private Menu menu;
 	private Inventory inventory;
-
+	
+	/**
+	 * Constructor
+	 * @param host
+	 * @param database
+	 * @param username
+	 * @param password
+	 * @param menu
+	 * @param inventory
+	 */
 	public DatabaseController(String host, String database, String username,
 			String password, Menu menu, Inventory inventory) {
 		this.host = host;
@@ -32,6 +41,11 @@ public class DatabaseController implements ActionListener{
 		this.inventory = inventory;
 	}
 
+	/**
+	 * Attempt to connect to MySQL database with given credentials
+	 * @return
+	 * @throws SQLException
+	 */
 	public boolean attemptConnection() throws SQLException {
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -45,6 +59,11 @@ public class DatabaseController implements ActionListener{
 		return true;
 	}
 
+	/**
+	 * Pulls all data from the MenuItems table
+	 * @return true on success
+	 * @throws SQLException
+	 */
 	public boolean pullMenu() throws SQLException {
 		Statement statement = connection.createStatement();
 		ResultSet set = statement.executeQuery("SELECT * FROM MenuItems");
@@ -60,6 +79,11 @@ public class DatabaseController implements ActionListener{
 		return true;
 	}
 
+	/**
+	 * Pulls all data from Ingredients table
+	 * @return true on success
+	 * @throws SQLException
+	 */
 	public boolean pullInventory() throws SQLException {
 		Statement statement = connection.createStatement();
 		ResultSet set = statement.executeQuery("SELECT * FROM Ingredients");
@@ -75,6 +99,13 @@ public class DatabaseController implements ActionListener{
 		return true;
 	}
 
+	/**
+	 * Updates Ingredients table
+	 * @param name
+	 * @param amount
+	 * @return
+	 * @throws SQLException
+	 */
 	public boolean updateInventory(String name, int amount) throws SQLException {
 		Statement statement = connection.createStatement();
 		ResultSet set = statement
@@ -83,11 +114,4 @@ public class DatabaseController implements ActionListener{
 		set.close();
 		return false;
 	}
-
-	@Override
-	public void actionPerformed(ActionEvent act) {
-		//do nothing
-		
-	}
-
 }

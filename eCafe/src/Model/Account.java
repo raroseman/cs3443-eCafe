@@ -4,8 +4,7 @@ package Model;
  * Class to keep track of the cash coming in
  * versus cash out.
  * 
- * @author Michael Schappel, Laura Aquino, Keith Cruz,
- * 		   Ryan Roseman, 
+ * @author All
  *
  */
 public class Account {
