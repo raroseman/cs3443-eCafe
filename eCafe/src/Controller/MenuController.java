@@ -1,5 +1,4 @@
 package Controller;
-import Timer;
 import View.MenuView;
 import View.StaticMenuView;
 

@@ -30,30 +30,16 @@ public class KitchenController implements ActionListener {
 		String command = e.getActionCommand();
 		if (command.equalsIgnoreCase("Serve")) {
 			if (!orderQueue.isEmpty()) {
+				displayReadyOrders();
 				//view.populateReadyField(orderQueue.get(0).toString());
 				//orderQueue.get(0).clearOrder();
 				//orderQueue.remove(0);
 				//restaurant.setQueue(orderQueue);
 				//view.clearProcessingArea();
-				
-				int i;
-		        
-		        for (i = 10; i < 0; i--) {
-						try {
-							Thread.sleep(1000);
-						} catch (InterruptedException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
-						}
-						if (i == 0) {
-		        			System.out.println("DONE\n");
-		        
-						}
-		        }
 			}
 		}
 	}
-
+	
 	public void getOrder() {
 		orderQueue = restaurant.getQueue();
 	}
@@ -79,16 +65,15 @@ public class KitchenController implements ActionListener {
 	
 	void displayReadyOrders() {
 		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-		view.populateProcessingField("Order #" + orderNumber + "     Time in: " + sdf.format(cal.getTime()) + "      Table: " + restaurant.getName());
-		view.populateProcessingField("---------------------------------------------------------------------------------------------------");
-		orderNumber++;
-		for (Order o : orderQueue) {
-				itemsQueue = o.getItems();
-			for (MenuItem i : itemsQueue) {
-				view.populateProcessingField(i.getName());
-			}
-			o.getItems().clear();
-		}
-		view.populateProcessingField("\n");	
+		view.populateReadyField("Order #" + (orderNumber - 1) + " Complete!     Time out: " + sdf.format(cal.getTime()) + "      Table: " + restaurant.getName());
+		view.populateReadyField("---------------------------------------------------------------------------------------------------");
+		//for (Order o : orderQueue) {
+		//		itemsQueue = o.getItems();
+		//	for (MenuItem i : itemsQueue) {
+		//		view.populateReadyField(i.getName());
+		//	}
+		//	o.getItems().clear();
+		//}
+		view.populateReadyField("\n");	
 	}
 }
