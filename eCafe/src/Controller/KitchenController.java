@@ -2,7 +2,10 @@ package Controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 import Model.MenuItem;
 import Model.Order;
@@ -14,6 +17,8 @@ public class KitchenController implements ActionListener {
 	private Restaurant restaurant;
 	private ArrayList<Order> orderQueue = new ArrayList<Order>();
 	private ArrayList<MenuItem> itemsQueue = new ArrayList<MenuItem>();
+	private Calendar cal = Calendar.getInstance();
+	private int orderNumber = 1;
 
 	public KitchenController(KitchenView view, Restaurant restaurant) {
 		this.view = view;
@@ -36,7 +41,6 @@ public class KitchenController implements ActionListener {
 
 	public void getOrder() {
 		orderQueue = restaurant.getQueue();
-		displayOrders();
 	}
 
 	public String toString() {
@@ -44,8 +48,18 @@ public class KitchenController implements ActionListener {
 	}
 
 	void displayOrders() {
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+		view.populateProcessingField("Order #" + orderNumber + "     Time in: " + sdf.format(cal.getTime()) + "      Table: " + restaurant.getName());
+		view.populateProcessingField("---------------------------------------------------------------------------------------------------");
+		orderNumber++;
 		for (Order o : orderQueue) {
-			view.populateProcessingField(o.toString());
+				itemsQueue = o.getItems();
+			for (MenuItem i : itemsQueue) {
+				view.populateProcessingField(i.getName());
+			}
+			o.getItems().clear();
 		}
+		view.populateProcessingField("\n");
+		
 	}
 }

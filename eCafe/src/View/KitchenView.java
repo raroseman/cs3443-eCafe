@@ -6,6 +6,7 @@ import java.awt.EventQueue;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 
 import java.awt.Color;
@@ -22,6 +23,8 @@ public class KitchenView extends JFrame{
 	private JPanel kitchenFrame;
 	private JButton btnServe;
 	private JTextArea processingArea, readyArea;
+	private JScrollPane processScroll, readyScroll;
+	private JTextArea menuItems, readyItems;
 
 	
 	/**
@@ -66,10 +69,10 @@ public class KitchenView extends JFrame{
 		/**
 		 * Orders processing should appear here.
 		 */
-		processingArea = new JTextArea();
-		processingArea.setEditable(false);
-		processingArea.setBounds(32, 36, 392, 191);
-		processingPanel.add(processingArea);
+		//processingArea = new JTextArea();
+		//processingArea.setEditable(false);
+		//processingArea.setBounds(32, 36, 392, 191);
+		//processingPanel.add(processingArea);
 		
 		/**
 		 * readyPanel holds the information for orders that are ready.
@@ -90,10 +93,10 @@ public class KitchenView extends JFrame{
 		/**
 		 * Ready orders should appear here.
 		 */
-		readyArea = new JTextArea();
-		readyArea.setEditable(false);
-		readyArea.setBounds(37, 42, 388, 194);
-		readyPanel.add(readyArea);
+		//readyArea = new JTextArea();
+		//readyArea.setEditable(false);
+		//readyArea.setBounds(37, 42, 388, 194);
+		//readyPanel.add(readyArea);
 		
 		/**
 		 * Panel that holds the title of the frame.
@@ -111,6 +114,26 @@ public class KitchenView extends JFrame{
 		lblKitchen.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		lblKitchen.setBounds(191, 23, 82, 21);
 		titlePanel.add(lblKitchen);
+		
+		/**
+		 * Scroll panel and text area for processing panel
+		 */
+		menuItems = new JTextArea();
+		menuItems.setEditable(false);
+		processScroll = new JScrollPane(menuItems);
+		processScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		processScroll.setBounds(32, 36, 392, 191);
+		processingPanel.add(processScroll);
+		
+		/**
+		 * Scroll Panel and text area for ready panel
+		 */
+		readyItems = new JTextArea();
+		menuItems.setEditable(false);
+		readyScroll = new JScrollPane(readyItems);
+		readyScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		readyScroll.setBounds(37, 42, 388, 194);
+		readyPanel.add(readyScroll);
 	}
 	
 	public void register(KitchenController controller) {
@@ -118,7 +141,7 @@ public class KitchenView extends JFrame{
     }	
 	
 	public void populateProcessField(String text) {
-		processingArea.append(text + "\n");
+		menuItems.append(text + "\n");
 	}
 	
 	public void populateReadyField(String text) {
@@ -126,7 +149,7 @@ public class KitchenView extends JFrame{
 	}
 	
 	public void populateProcessingField(String text) {
-		processingArea.append(text + "\n");
+		menuItems.append(text + "\n");
 	}
 	
 	public void clearProcessingArea(){
