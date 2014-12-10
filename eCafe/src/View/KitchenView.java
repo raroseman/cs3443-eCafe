@@ -145,7 +145,7 @@ public class KitchenView extends JFrame{
 	}
 	
 	public void populateReadyField(String text) {
-		readyArea.append(text + "\n");
+		readyItems.append(text + "\n");
 	}
 	
 	public void populateProcessingField(String text) {
@@ -153,6 +153,6 @@ public class KitchenView extends JFrame{
 	}
 	
 	public void clearProcessingArea(){
-		processingArea.setText("");
+		menuItems.setText("");
 	}
 }

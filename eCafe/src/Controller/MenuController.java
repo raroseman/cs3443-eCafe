@@ -1,4 +1,5 @@
 package Controller;
+import Timer;
 import View.MenuView;
 import View.StaticMenuView;
 
@@ -12,6 +13,7 @@ import javax.swing.DefaultListModel;
 import Model.Menu;
 import Model.MenuItem;
 import Model.Order;
+import Model.ProcessingTimer;
 import Model.Restaurant;
 
 /**
@@ -28,6 +30,7 @@ public class MenuController implements ActionListener{
 	private Order order;
 	private Restaurant restaurant;
 	private KitchenController kitchenController;
+	private ProcessingTimer orderTimer = new ProcessingTimer(10);
 	/**
 	 * Constructor takes a menu and menuView as parameters.
 	 * @param menu The menu associated with the restaurant.
@@ -131,7 +134,7 @@ public class MenuController implements ActionListener{
 		 */
 		else if(command.equalsIgnoreCase("Place Order!")){
 			restaurant.placeOrder(order);
-			kitchenController.displayOrders();
+			kitchenController.displayProcessOrders();
 			orderModel.clear();
 			menuView.getOrd().setModel(orderModel);
 			total = 0;

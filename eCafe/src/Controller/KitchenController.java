@@ -30,11 +30,26 @@ public class KitchenController implements ActionListener {
 		String command = e.getActionCommand();
 		if (command.equalsIgnoreCase("Serve")) {
 			if (!orderQueue.isEmpty()) {
-				view.populateReadyField(orderQueue.get(0).toString());
-				orderQueue.get(0).clearOrder();
-				orderQueue.remove(0);
-				restaurant.setQueue(orderQueue);
-				view.clearProcessingArea();
+				//view.populateReadyField(orderQueue.get(0).toString());
+				//orderQueue.get(0).clearOrder();
+				//orderQueue.remove(0);
+				//restaurant.setQueue(orderQueue);
+				//view.clearProcessingArea();
+				
+				int i;
+		        
+		        for (i = 10; i < 0; i--) {
+						try {
+							Thread.sleep(1000);
+						} catch (InterruptedException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						if (i == 0) {
+		        			System.out.println("DONE\n");
+		        
+						}
+		        }
 			}
 		}
 	}
@@ -47,7 +62,7 @@ public class KitchenController implements ActionListener {
 		return restaurant.getName();
 	}
 
-	void displayOrders() {
+	void displayProcessOrders() {
 		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 		view.populateProcessingField("Order #" + orderNumber + "     Time in: " + sdf.format(cal.getTime()) + "      Table: " + restaurant.getName());
 		view.populateProcessingField("---------------------------------------------------------------------------------------------------");
@@ -59,7 +74,21 @@ public class KitchenController implements ActionListener {
 			}
 			o.getItems().clear();
 		}
-		view.populateProcessingField("\n");
-		
+		view.populateProcessingField("\n");	
+	}
+	
+	void displayReadyOrders() {
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+		view.populateProcessingField("Order #" + orderNumber + "     Time in: " + sdf.format(cal.getTime()) + "      Table: " + restaurant.getName());
+		view.populateProcessingField("---------------------------------------------------------------------------------------------------");
+		orderNumber++;
+		for (Order o : orderQueue) {
+				itemsQueue = o.getItems();
+			for (MenuItem i : itemsQueue) {
+				view.populateProcessingField(i.getName());
+			}
+			o.getItems().clear();
+		}
+		view.populateProcessingField("\n");	
 	}
 }
