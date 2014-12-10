@@ -25,7 +25,7 @@ public class Order {
 
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GETTERS/SETTERS
 	/**
-	 * 
+	 * Get the source
 	 * @return source
 	 */
 	public Table getSource() {
@@ -33,6 +33,7 @@ public class Order {
 	}
 
 	/**
+	 * Set the source
 	 * 
 	 * @param source
 	 */
