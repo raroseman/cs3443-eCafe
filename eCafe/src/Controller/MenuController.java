@@ -17,9 +17,9 @@ import Model.ProcessingTimer;
 import Model.Restaurant;
 
 /**
- * MenuController controls most of the functionality for the menu view.
+ * This class controls most of the functionality for the menu view.
  * 
- * @author
+ * @author All
  *
  */
 public class MenuController implements ActionListener {

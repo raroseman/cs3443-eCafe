@@ -11,6 +11,12 @@ import Model.Order;
 import Model.Restaurant;
 import View.KitchenView;
 
+/**
+ * This class manages the interaction with the KitchenView GUI interface
+ * 
+ * @author All
+ *
+ */
 public class KitchenController implements ActionListener {
 	private KitchenView view;
 	private Restaurant restaurant;
@@ -22,6 +28,7 @@ public class KitchenController implements ActionListener {
 
 	/**
 	 * Constructor
+	 * 
 	 * @param view
 	 * @param restaurant
 	 */
@@ -42,7 +49,7 @@ public class KitchenController implements ActionListener {
 			}
 		}
 	}
-	
+
 	/**
 	 * Pulls orders from restaurant class
 	 */
@@ -50,10 +57,9 @@ public class KitchenController implements ActionListener {
 		orderQueue = restaurant.getQueue();
 	}
 
-	public String toString() {
-		return restaurant.getName();
-	}
-
+	/**
+	 * Displays non-completed orders in processing area
+	 */
 	void displayProcessOrders() {
 		view.clearProcessingArea();
 		if (!orderQueue.isEmpty()) {
@@ -73,6 +79,9 @@ public class KitchenController implements ActionListener {
 		}
 	}
 
+	/**
+	 * Displays completed orders in read area
+	 */
 	void displayReadyOrders() {
 		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 		view.populateReadyField("Order #" + (serveNumber++)

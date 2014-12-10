@@ -3,7 +3,7 @@ package Model;
 import java.util.ArrayList;
 
 /**
- * Class to manage the orders. 
+ * This class outlines the Order object
  * 
  * @author All
  *
@@ -25,7 +25,7 @@ public class Order {
 
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GETTERS/SETTERS
 	/**
-	 * 
+	 * Return source table
 	 * @return source
 	 */
 	public Table getSource() {
@@ -33,7 +33,7 @@ public class Order {
 	}
 
 	/**
-	 * 
+	 * Set source table
 	 * @param source
 	 */
 	public void setSource(Table source) {
@@ -120,6 +120,9 @@ public class Order {
 		items.clear();
 	}
 	
+	/**
+	 * Return a String interpretation of the order object
+	 */
 	public String toString(){
 		String orderSummary = "Order:\n";
 		for(int i = 0; i < items.size(); i++){
