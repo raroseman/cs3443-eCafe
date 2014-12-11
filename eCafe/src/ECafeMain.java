@@ -44,8 +44,7 @@ public class ECafeMain {
 		}
 
 		menuView = new MenuView(1, restaurant);
-		menuView.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		menuView.setVisible(true);
+		
 
 		kitchenView = new KitchenView();
 		kitchenController = new KitchenController(kitchenView, restaurant);
@@ -55,12 +54,11 @@ public class ECafeMain {
 		menuView.registerListener(menuController);
 
 		kitchenView.register(kitchenController);
-		kitchenView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		kitchenView.setVisible(true);
+		
 
 		databaseView = new DatabaseView(restaurant);
-		databaseView.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		databaseView.setVisible(true);
+		
+		ViewFormatter f = new ViewFormatter(menuView, kitchenView, databaseView);
 
 	}
 
