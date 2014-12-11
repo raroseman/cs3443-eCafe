@@ -54,7 +54,7 @@ public class Account {
 	}
 
 	/**
-	 * Cash out
+	 * The ingredients bought
 	 * @param cost
 	 */
 	public void buyIngredients(double cost) {
