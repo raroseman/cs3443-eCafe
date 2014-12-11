@@ -39,6 +39,8 @@ public class ECafeMain {
 			db.pullInventory();
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
+			System.err.println("\n\nPlease set up database.\nExiting Application\n");
+			return;
 		}
 
 		menuView = new MenuView(1, restaurant);
