@@ -5,8 +5,10 @@ import javax.swing.JFrame;
 import Controller.*;
 import Model.*;
 import View.*;
+
 /**
  * This class contains the main, which runs our application
+ * 
  * @author All
  *
  */
@@ -18,9 +20,10 @@ public class ECafeMain {
 	private static Restaurant restaurant;
 	private static MenuController menuController;
 	private static KitchenController kitchenController;
-	
+
 	/**
 	 * Create interfaces and necessary components
+	 * 
 	 * @param args
 	 * @throws SQLException
 	 */
@@ -30,12 +33,13 @@ public class ECafeMain {
 		db = new DatabaseController("localhost", "ECafe", "root", "",
 				restaurant.getMenu(), restaurant.getInventory());
 
-		while (!db.attemptConnection())
-			;
-
-		db.pullMenu();
-
-		db.pullInventory();
+		try {
+			db.attemptConnection();
+			db.pullMenu();
+			db.pullInventory();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
 
 		menuView = new MenuView(1, restaurant);
 		menuView.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

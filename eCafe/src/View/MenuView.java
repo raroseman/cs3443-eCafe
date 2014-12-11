@@ -1,18 +1,22 @@
 package View;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Font;
 
 import javax.swing.AbstractButton;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
-import javax.swing.*;
 
-import Model.Menu;
-import Model.Restaurant;
 import Controller.MenuController;
+import Model.Restaurant;
 
 /**
  * 
@@ -68,8 +72,9 @@ public class MenuView extends JFrame {
 		// searchPanel.add(textArea);
 
 		list = new JList();
-		list.setBounds(58, 78, 336, 142);
-		searchPanel.add(list);
+		JScrollPane frame1 = new JScrollPane(list);
+		frame1.setBounds(58, 78, 336, 142);
+		searchPanel.add(frame1);
 
 		/**
 		 * Where the customer enters the search query.
@@ -116,13 +121,11 @@ public class MenuView extends JFrame {
 		/**
 		 * Area to display the ordered items.
 		 */
-		// textArea_1 = new JTextArea();
-		// textArea_1.setEditable(false);
-		// textArea_1.setBounds(76, 33, 223, 198);
-		// orderPanel.add(textArea_1);
 		list2 = new JList();
-		list2.setBounds(76, 33, 223, 198);
-		orderPanel.add(list2);
+		JScrollPane frame2 = new JScrollPane(list2);
+		frame2.setBounds(76,33,223,198);
+		orderPanel.add(frame2);
+
 
 		/**
 		 * This should be updated when items are place into order.
