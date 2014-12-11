@@ -29,7 +29,7 @@ public class Employee {
 	 * @param orderTotal
 	 * @return sales;
 	 */
-	double getSales(double orderTotal) {
+	public double getSales(double orderTotal) {
 		sales += orderTotal;
 		return sales;
 	}
@@ -38,7 +38,7 @@ public class Employee {
 	 * Generates a random unique ID for the employee's shift
 	 * @return shiftID
 	 */
-	int getShiftID() {
+	public int getShiftID() {
 		Random rand = new Random();
 		shiftID = rand.nextInt(9999 - 0 + 1) + 0;
 		return shiftID;
@@ -48,7 +48,7 @@ public class Employee {
 	 * Gets employee's Social Security Number
 	 * @return SSN
 	 */
-	int getSSN() {
+	public int getSSN() {
 		return SSN;
 	}
 	
@@ -57,7 +57,7 @@ public class Employee {
 	 * @param jobTitle
 	 * @return jobTitleCode
 	 */
-	int getJobTitleCode(String jobTitle) {
+	public int getJobTitleCode(String jobTitle) {
 		switch(jobTitle) {
 			case "host":
 				jobTitleCode = 1;
