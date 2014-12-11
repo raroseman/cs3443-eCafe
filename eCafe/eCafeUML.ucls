@@ -3,7 +3,7 @@
   generalizations="true" realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
   <class id="1" language="java" name="Controller.DatabaseController" project="eCafe" 
     file="/eCafe/src/Controller/DatabaseController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="250" width="383" x="1527" y="444"/>    
+    <position height="-1" width="-1" x="1704" y="553"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="Model.Order" project="eCafe" file="/eCafe/src/Model/Order.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="340" width="235" x="676" y="1186"/>    
+    <position height="-1" width="-1" x="529" y="888"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="Model.Account" project="eCafe" file="/eCafe/src/Model/Account.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="196" width="153" x="981" y="914"/>    
+    <position height="-1" width="-1" x="791" y="880"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </class>  
   <class id="7" language="java" name="Model.MenuSpecial" project="eCafe" file="/eCafe/src/Model/MenuSpecial.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="178" width="202" x="951" y="1186"/>    
+    <position height="-1" width="-1" x="796" y="1179"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -84,7 +84,7 @@
   </class>  
   <class id="10" language="java" name="Controller.KitchenController" project="eCafe" 
     file="/eCafe/src/Controller/KitchenController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="214" width="271" x="520" y="-8"/>    
+    <position height="-1" width="-1" x="695" y="183"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -93,7 +93,7 @@
   </class>  
   <class id="11" language="java" name="Controller.MenuController" project="eCafe" 
     file="/eCafe/src/Controller/MenuController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="178" width="385" x="679" y="-226"/>    
+    <position height="-1" width="-1" x="525" y="-231"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -102,7 +102,7 @@
   </class>  
   <class id="12" language="java" name="Model.Ingredient" project="eCafe" file="/eCafe/src/Model/Ingredient.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="322" width="208" x="1506" y="1186"/>    
+    <position height="-1" width="-1" x="1400" y="1091"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -111,7 +111,7 @@
   </class>  
   <class id="13" language="java" name="Model.Inventory" project="eCafe" file="/eCafe/src/Model/Inventory.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="160" width="265" x="1687" y="914"/>    
+    <position height="-1" width="-1" x="1681" y="898"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -129,7 +129,7 @@
   </class>  
   <class id="15" language="java" name="Model.Table" project="eCafe" file="/eCafe/src/Model/Table.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="232" width="174" x="746" y="914"/>    
+    <position height="-1" width="-1" x="629" y="500"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -147,7 +147,7 @@
   </class>  
   <class id="17" language="java" name="Model.Menu" project="eCafe" file="/eCafe/src/Model/Menu.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="214" width="271" x="1174" y="914"/>    
+    <position height="-1" width="-1" x="1067" y="989"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -165,114 +165,123 @@
   </class>  
   <class id="19" language="java" name="View.ViewFormatter" project="eCafe" file="/eCafe/src/View/ViewFormatter.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1918" y="58"/>    
+    <position height="-1" width="-1" x="1725" y="328"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="20">    
+  <class id="20" language="java" name="Model.Employee" project="eCafe" file="/eCafe/src/Model/Employee.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="260" width="172" x="254" y="386"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="21">    
     <bendpoint x="950" y="914"/>    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="21" name="queue">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="22" name="queue">        
+        <position height="0" width="0" x="-264" y="-468"/>      
       </attribute>      
-      <multiplicity id="22" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="23" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-264" y="-468"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="23">    
+  <dependency id="24">    
     <bendpoint x="821" y="-8"/>    
     <bendpoint x="821" y="444"/>    
     <end type="SOURCE" refId="11"/>    
     <end type="TARGET" refId="15"/>  
   </dependency>  
-  <association id="24">    
+  <association id="25">    
     <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="25" name="kitchen"/>      
-      <multiplicity id="26" minimum="0" maximum="1"/>    
+      <attribute id="26" name="kitchen"/>      
+      <multiplicity id="27" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="27">    
+  <association id="28">    
     <bendpoint x="653" y="444"/>    
     <bendpoint x="666" y="914"/>    
     <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="28" name="orderQueue">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="29" name="orderQueue">        
+        <position height="0" width="0" x="-264" y="-468"/>      
       </attribute>      
-      <multiplicity id="29" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="30" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-264" y="-468"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="30">    
+  <association id="31">    
     <bendpoint x="1073" y="-8"/>    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="31" name="restaurant">        
+      <attribute id="32" name="restaurant">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="32" minimum="0" maximum="1">        
+      <multiplicity id="33" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="33">    
+  <association id="34">    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="34" name="menuController">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="35" name="menuController">        
+        <position height="0" width="0" x="-346" y="-94"/>      
       </attribute>      
-      <multiplicity id="35" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="36" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-346" y="-94"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="36">    
+  <association id="37">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="37" name="menu">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="38" name="menu">        
+        <position height="0" width="0" x="-242" y="-32"/>      
       </attribute>      
-      <multiplicity id="38" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="39" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-242" y="-32"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="17" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="39">    
+  <dependency id="40">    
     <bendpoint x="1496" y="444"/>    
     <bendpoint x="1496" y="914"/>    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="12"/>  
   </dependency>  
-  <dependency id="40">    
+  <dependency id="41">    
     <end type="SOURCE" refId="11"/>    
     <end type="TARGET" refId="14"/>  
   </dependency>  
-  <association id="41">    
+  <association id="42">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="42" name="inventory">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="43" name="inventory">        
+        <position height="0" width="0" x="-138" y="-96"/>      
       </attribute>      
-      <multiplicity id="43" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="44" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-138" y="-96"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="44">    
+  <dependency id="45">    
     <bendpoint x="468" y="-8"/>    
     <bendpoint x="468" y="444"/>    
     <bendpoint x="468" y="914"/>    
@@ -280,417 +289,425 @@
     <end type="SOURCE" refId="11"/>    
     <end type="TARGET" refId="5"/>  
   </dependency>  
-  <association id="45">    
+  <association id="46">    
     <bendpoint x="489" y="-8"/>    
     <bendpoint x="489" y="444"/>    
     <bendpoint x="531" y="914"/>    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="46" name="order">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="47" name="order">        
+        <position height="0" width="0" x="-264" y="-468"/>      
       </attribute>      
-      <multiplicity id="47" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="48" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-264" y="-468"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="48">    
+  <dependency id="49">    
     <bendpoint x="1475" y="444"/>    
     <bendpoint x="1475" y="914"/>    
     <bendpoint x="1475" y="1186"/>    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="5"/>  
   </dependency>  
-  <dependency id="49">    
+  <dependency id="50">    
     <bendpoint x="1101" y="444"/>    
     <end type="SOURCE" refId="14"/>    
     <end type="TARGET" refId="17"/>  
   </dependency>  
-  <dependency id="50">    
+  <dependency id="51">    
     <bendpoint x="674" y="444"/>    
     <bendpoint x="645" y="914"/>    
     <bendpoint x="645" y="1186"/>    
     <end type="SOURCE" refId="14"/>    
     <end type="TARGET" refId="5"/>  
   </dependency>  
-  <association id="51">    
+  <association id="52">    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="52" name="menuView">        
+      <attribute id="53" name="menuView">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="53" minimum="0" maximum="1">        
+      <multiplicity id="54" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="54">    
+  <association id="55">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="55" name="source">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="56" name="source">        
+        <position height="0" width="0" x="-204" y="-530"/>      
       </attribute>      
-      <multiplicity id="56" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="57" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-204" y="-530"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="57">    
+  <association id="58">    
     <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="58" name="restaurant">        
+      <attribute id="59" name="restaurant">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="59" minimum="0" maximum="1">        
+      <multiplicity id="60" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="60">    
+  <association id="61">    
     <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="61" name="ingredients">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="62" name="ingredients">        
+        <position height="0" width="0" x="-210" y="-256"/>      
       </attribute>      
-      <multiplicity id="62" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="63" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-210" y="-256"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="63">    
+  <association id="64">    
     <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="64" name="order">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="65" name="order">        
+        <position height="0" width="0" x="-264" y="-468"/>      
       </attribute>      
-      <multiplicity id="65" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="66" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-264" y="-468"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="66">    
+  <dependency id="67">    
     <bendpoint x="1454" y="444"/>    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="17"/>  
   </dependency>  
-  <association id="67">    
+  <association id="68">    
     <bendpoint x="1412" y="-226"/>    
     <bendpoint x="1412" y="-8"/>    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="68" name="restaurant">        
+      <attribute id="69" name="restaurant">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="69" minimum="0" maximum="1">        
+      <multiplicity id="70" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="70">    
+  <association id="71">    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="71" name="account">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="72" name="account">        
+        <position height="0" width="0" x="-266" y="-132"/>      
       </attribute>      
-      <multiplicity id="72" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="73" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-266" y="-132"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="73">    
+  <association id="74">    
     <bendpoint x="648" y="-226"/>    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="74" name="kitchenController">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="75" name="kitchenController">        
+        <position height="18" width="101" x="690" y="24"/>      
       </attribute>      
-      <multiplicity id="75" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="76" minimum="0" maximum="1">        
+        <position height="0" width="0" x="40" y="84"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="76">    
+  <association id="77">    
     <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="77" name="db"/>      
-      <multiplicity id="78" minimum="0" maximum="1"/>    
+      <attribute id="78" name="db"/>      
+      <multiplicity id="79" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="79">    
+  <association id="80">    
     <bendpoint x="1454" y="-226"/>    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="80" name="databaseView">        
+      <attribute id="81" name="databaseView">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="81" minimum="0" maximum="1">        
+      <multiplicity id="82" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="82">    
+  <association id="83">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="84" name="tables"/>      
+      <multiplicity id="85" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="86">    
     <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="83" name="restaurant">        
+      <attribute id="87" name="restaurant">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="84" minimum="0" maximum="1">        
+      <multiplicity id="88" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="85">    
+  <dependency id="89">    
     <bendpoint x="1433" y="-226"/>    
     <bendpoint x="1433" y="-8"/>    
     <bendpoint x="1433" y="444"/>    
     <end type="SOURCE" refId="9"/>    
     <end type="TARGET" refId="17"/>  
   </dependency>  
-  <dependency id="86">    
+  <dependency id="90">    
     <end type="SOURCE" refId="9"/>    
     <end type="TARGET" refId="19"/>  
   </dependency>  
-  <association id="87">    
+  <association id="91">    
     <bendpoint x="1183" y="1186"/>    
     <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="88" name="items">        
+      <attribute id="92" name="items">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="89" minimum="0" maximum="2147483647">        
+      <multiplicity id="93" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="90">    
+  <association id="94">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="91" name="items">        
+      <attribute id="95" name="items">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="92" minimum="0" maximum="2147483647">        
+      <multiplicity id="96" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="93">    
+  <association id="97">    
     <bendpoint x="1273" y="-226"/>    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="94" name="menuView">        
+      <attribute id="98" name="menuView">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="95" minimum="0" maximum="1">        
+      <multiplicity id="99" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="96">    
+  <association id="100">    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="97" name="tables">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="101" name="tables">        
+        <position height="0" width="0" x="-204" y="-530"/>      
       </attribute>      
-      <multiplicity id="98" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="102" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-204" y="-530"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="99">    
+  <association id="103">    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="100" name="menu">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="104" name="menu">        
+        <position height="0" width="0" x="-242" y="-32"/>      
       </attribute>      
-      <multiplicity id="101" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="105" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-242" y="-32"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="17" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="102">    
+  <association id="106">    
     <bendpoint x="510" y="444"/>    
     <bendpoint x="510" y="914"/>    
     <bendpoint x="510" y="1186"/>    
     <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="103" name="itemsQueue">        
+      <attribute id="107" name="itemsQueue">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="104" minimum="0" maximum="2147483647">        
+      <multiplicity id="108" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="105">    
+  <association id="109">    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="106" name="inventory">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="110" name="inventory">        
+        <position height="0" width="0" x="-138" y="-96"/>      
       </attribute>      
-      <multiplicity id="107" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="111" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-138" y="-96"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="108">    
+  <association id="112">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="109" name="items">        
+      <attribute id="113" name="items">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="110" minimum="0" maximum="2147483647">        
+      <multiplicity id="114" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="111">    
+  <dependency id="115">    
     <bendpoint x="1961" y="-226"/>    
     <bendpoint x="1961" y="-8"/>    
     <bendpoint x="1961" y="444"/>    
     <end type="SOURCE" refId="9"/>    
     <end type="TARGET" refId="13"/>  
   </dependency>  
-  <association id="112">    
+  <association id="116">    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="113" name="kitchenController">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="117" name="kitchenController">        
+        <position height="18" width="101" x="501" y="18"/>      
       </attribute>      
-      <multiplicity id="114" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="118" minimum="0" maximum="1">        
+        <position height="0" width="0" x="40" y="84"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="115">    
+  <association id="119">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="116" name="restaurant">        
+      <attribute id="120" name="restaurant">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="117" minimum="0" maximum="1">        
+      <multiplicity id="121" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="118">    
+  <association id="122">    
     <bendpoint x="1094" y="-226"/>    
     <bendpoint x="1094" y="-8"/>    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="119" name="kitchenView">        
+      <attribute id="123" name="kitchenView">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="120" minimum="0" maximum="1">        
+      <multiplicity id="124" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="121">    
+  <association id="125">    
     <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="122" name="menu"/>      
-      <multiplicity id="123" minimum="0" maximum="1"/>    
+      <attribute id="126" name="menu"/>      
+      <multiplicity id="127" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="124">    
+  <association id="128">    
     <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="125" name="view">        
+      <attribute id="129" name="view">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="126" minimum="0" maximum="1">        
+      <multiplicity id="130" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="127">    
+  <association id="131">    
     <bendpoint x="1391" y="-8"/>    
     <bendpoint x="1391" y="444"/>    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="128" name="menu">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="132" name="menu">        
+        <position height="0" width="0" x="-242" y="-32"/>      
       </attribute>      
-      <multiplicity id="129" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="133" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-242" y="-32"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="17" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="130">    
+  <dependency id="134">    
     <bendpoint x="1940" y="444"/>    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="13"/>  
   </dependency>  
-  <association id="131">    
+  <association id="135">    
     <bendpoint x="1674" y="-226"/>    
     <bendpoint x="1674" y="-8"/>    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="132" name="db">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="136" name="db">        
+        <position height="0" width="0" x="-14" y="-16"/>      
       </attribute>      
-      <multiplicity id="133" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="137" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-14" y="-16"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="134">    
+  <association id="138">    
     <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="135" name="specials">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="139" name="specials">        
+        <position height="0" width="0" x="-256" y="-96"/>      
       </attribute>      
-      <multiplicity id="136" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="140" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-256" y="-96"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="137">    
+  <association id="141">    
     <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="138" name="restaurant">        
+      <attribute id="142" name="restaurant">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="139" minimum="0" maximum="1">        
+      <multiplicity id="143" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="140">    
+  <association id="144">    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="141" name="orderTimer">        
+      <attribute id="145" name="orderTimer">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="142" minimum="0" maximum="1">        
+      <multiplicity id="146" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
