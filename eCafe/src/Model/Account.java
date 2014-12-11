@@ -57,7 +57,7 @@ public class Account {
 	 * Cash out
 	 * @param cost
 	 */
-	public void buyIng(double cost) {
+	public void buyIngredients(double cost) {
 		this.cash -= cost;
 	}
 
