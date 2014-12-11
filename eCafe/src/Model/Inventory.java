@@ -18,10 +18,18 @@ public class Inventory {
 		ingredients = new ArrayList<Ingredient>();
 	}
 
+	/**
+	 * Get the ingredients from the array list
+	 * @return ingredients
+	 */
 	public ArrayList<Ingredient> getIngredients() {
 		return ingredients;
 	}
 
+	/**
+	 * Set the ingredients
+	 * @param ingredients
+	 */
 	public void setIngredients(ArrayList<Ingredient> ingredients) {
 		this.ingredients = ingredients;
 	}
